@@ -1,0 +1,28 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-13T15:13:25", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-13T14:13:25+0530", "EndDate" : "2021-05-13T15:13:25+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "GRAPH_ID", "SourceColumn" : "GRAPH_ID", "Description" : "GRAPH_ID", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "TEAM_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "KPI", "SourceColumn" : "KPI", "Description" : "KPI", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "LOWER_LIMIT", "SourceColumn" : "LOWER_LIMIT", "Description" : "LOWER_LIMIT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "UPPER_LIMIT", "SourceColumn" : "UPPER_LIMIT", "Description" : "UPPER_LIMIT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "UNITFORYAXIS", "SourceColumn" : "UNITFORYAXIS", "Description" : "UNITFORYAXIS", "SQLDataType" : -9, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "KPI_TYPE", "SourceColumn" : "KPI_TYPE", "Description" : "KPI_TYPE", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "GRAPH_ID" : "3", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "SO3 - GREEN-ETY-Proactive Reporting Raised(Weekly)", "LOWER_LIMIT" : "4.00", "UPPER_LIMIT" : "7.00", "UNITFORYAXIS" : "Nos", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "2", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "SO2 - AWESOME-KAIZENS RAISED (Weekly)", "LOWER_LIMIT" : "1.00", "UPPER_LIMIT" : "2.00", "UNITFORYAXIS" : "Nos", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "4", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "SO3 - GREEN-ETY-HAZARDOUS WASTE (Weekly)", "LOWER_LIMIT" : "400.00", "UPPER_LIMIT" : "325.00", "UNITFORYAXIS" : "Kg", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "5", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "SO3 - I SMILE-5S 2ND  FLOOR(Weekly)", "LOWER_LIMIT" : "55.00", "UPPER_LIMIT" : "65.00", "UNITFORYAXIS" : "Points", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "11", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "SO2 - CREDIBLE-RM ADDN. ACCURACY PGL LIQ(ABS VAR)", "LOWER_LIMIT" : "10.00", "UPPER_LIMIT" : "5.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "12", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "SO1 - CREDIBLE-HYGIENE SCORE FF (TSD&MIX)-Weekly", "LOWER_LIMIT" : "80.00", "UPPER_LIMIT" : "100.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "6", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "I SMILE-Manual Intervention (Powder Sequence Hold)", "LOWER_LIMIT" : "13.00", "UPPER_LIMIT" : "8.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "1", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "MAESTRO-LIQ PRE BATCHING TIME(Daily)", "LOWER_LIMIT" : "55", "UPPER_LIMIT" : "40", "UNITFORYAXIS" : "Hrs", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "8", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "CREDIBLE-INPROCESS CHECK FOR BATCH(Shift)", "LOWER_LIMIT" : "22", "UPPER_LIMIT" : "15", "UNITFORYAXIS" : "Min", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "10", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "CREDIBLE-BREAKDOWN REDUCTION(Shift)", "LOWER_LIMIT" : "150", "UPPER_LIMIT" : "100", "UNITFORYAXIS" : "Min", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "9", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "CREDIBLE-BATCH APRROVAL CT", "LOWER_LIMIT" : "2.50", "UPPER_LIMIT" : "2.00", "UNITFORYAXIS" : "Hrs", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "7", "TEAM_NAME" : "TECHNOCRATS", "KPI" : "CREDIBLE-RFT(ROYALE &TE)- Daily", "LOWER_LIMIT" : "70.00", "UPPER_LIMIT" : "85.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" } ]
+		 } ]
+	 }
+ }

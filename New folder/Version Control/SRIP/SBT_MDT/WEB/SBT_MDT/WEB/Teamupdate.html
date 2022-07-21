@@ -1,0 +1,111 @@
+<html>
+    <body>
+            <select
+          class="_selectField"
+          id="_TECHNOCRATS"
+        ></select>
+        <select id="type">
+             <option value="SBT - ">SBT</option>
+             <option value="MDT - ">MDT</option>
+             <option value="DBT - ">DBT</option>
+        </select>
+        <button onclick="updateteam()">Update</button>
+    </body>
+  <script src="/XMII/CM/AP_SBT_MDT/V3/monthly/JS/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            selectTechno();
+        }
+var externalCred = "&IllumLoginName=atos_mii&IllumLoginPassword=Pass01";
+var ipAddress = ""; //"http://172.16.156.105:50000";
+var contentType = "&IsTesting=T&Content-Type=text%2Fjson";
+        function selectTechno() {
+  const API =
+    "/XMII/Illuminator?QueryTemplate=AP_SBT_MDT%2FTransactionKPI%2FExecuteMasterTeam";
+  const API_URL = ipAddress + API + contentType + externalCred;
+  const Local_URL = "./JS/dummy_data/team.json";
+
+  const params = {};
+  ajaxCall(
+    API_URL,
+    params,
+    function (result) {
+      $("#_TECHNOCRATS").empty();
+      $("#_TECHNOCRATS").append(
+        "<option value='' disabled>Select Team</option>"
+      );
+      const dataList = result.Rowsets.Rowset
+        ? result.Rowsets.Rowset[0].Row
+        : [];
+      // console.log("ajax-response", dataList);
+      var htm = "";
+      if (dataList && dataList.length > 0) {
+        $.each(dataList, function (i, item) {
+          htm +=
+            "<option value='" +
+            item.TEAM_NAME +
+            "'>" +
+            item.TEAM_NAME +
+            "</option>";
+        });
+        $("#_TECHNOCRATS").append(htm);
+      } else {
+        // console.log("no data");
+
+        $("#_TECHNOCRATS").append(
+          "<option value='' selected disabled>Select</option> <option value='' disabled>No Data</option>"
+        );
+      }
+    },
+    function (err) {
+      console.log("err", err);
+      $("#plant").append(
+        "<option value='' selected disabled>Select Plant</option> <option value='' disabled>No Data</option>"
+      );
+    }
+  );
+}
+function updateteam() {
+    const oldteamname = $("#_TECHNOCRATS").val();
+    const newteamname = $("#type").val() + $("#_TECHNOCRATS").val();
+    const API =
+    "/XMII/Illuminator?QueryTemplate=SBT_MDT%2FXact%2FXACT_UPDATE_TEAMNAME";
+  const API_URL = ipAddress + API + contentType + externalCred;
+
+  const params = {
+      'Param.1' : oldteamname,
+      'Param.2' : newteamname
+  };
+  ajaxCall(
+    API_URL,
+    params,
+    function (result) {
+      const dataList = result.Rowsets.Rowset
+        ? result.Rowsets.Rowset[0].Row
+        : [];
+      // console.log("ajax-response", dataList);
+      var htm = "";
+      if (dataList && dataList.length > 0) {
+        alert('Updated');
+selectTechno();
+      } else {
+        
+      }
+    },
+    function (err) {
+      console.log("err", err);
+    }
+  );
+}
+function ajaxCall(url, params, callback, error) {
+  $.ajax({
+    type: "GET",
+    url: url,
+    dataType: "json",
+    data: { ...params },
+    success: callback,
+    error: error,
+  });
+}
+    </script>
+</html>

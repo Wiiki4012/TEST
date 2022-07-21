@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SBT/MDT Overall Analysis</title>
+    <link rel="stylesheet" href="CSS/documentation.css" />
+    <link rel="stylesheet" href="CSS/materialize.min.css" />
+    <link rel="stylesheet" href="CSS/animate.min.css" />
+    <link rel="stylesheet" href="CSS/aos.css" />
+    <link rel="stylesheet" href="CSS/utility.css" />
+    <link rel="stylesheet" href="CSS/multiselect.css" />
+    <link rel="stylesheet" href="CSS/daterangepicker.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/dx.light.css" />
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="main-container">
+        <div id="page-content">
+          <div class="content-header" id="header">
+            <div class="text-left">
+              <div class="mytitle">
+                Analysis <span id="analysisType" style="display: none"></span>
+              </div>
+            </div>
+          </div>
+          <div style="height: 7vh"></div>
+          <div class="plantfloat">
+            <select
+              id="InputAnalysisType"
+              class="form-control plant dropdown"
+              onchange="changeAnalysisType(this.value)"
+              style="
+                width: 10vw;
+              "
+            >
+              <option value="MDT" selected>MDT</option>
+              <option value="SBT">SBT</option>
+              <option value="DBT">DBT</option>
+            </select>
+            <select
+              id="teamSelection"
+              class="form-control plant dropdown"
+              style="
+                width: 20vw;
+              "
+              value=""
+              onchange="onChangeTeam(this.value)"
+            >
+              <option value="" selected disabled>Select Team</option>
+            </select>
+          </div>
+
+          <div id="card-stats" class="pt-0 statistics-cards">
+            <div class="row">
+              <div class="col s12 m6 l2">
+                <div class="card animate fadeLeft">
+                  <div class="card-content orange white-text">
+                    <p class="card-stats-title">TOTAL CAPA</p>
+                    <h4
+                      class="card-stats-number white-text"
+                      id="stat-total-capa"
+                    ></h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m6 l2">
+                <div class="card animate fadeLeft">
+                  <div class="card-content green white-text">
+                    <p class="card-stats-title">COMPLETED</p>
+                    <h4
+                      class="card-stats-number white-text"
+                      id="stat-completed"
+                    ></h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col s12 m6 l2">
+                <div class="card animate fadeLeft">
+                  <div class="card-content red white-text">
+                    <p class="card-stats-title">PENDING</p>
+                    <h4
+                      class="card-stats-number white-text"
+                      id="stat-pending"
+                    ></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin: 0">
+            <div class="col s12 m4 l4 text-center">
+              <div class="block z-depth-1" data-aos="zoom-out">
+                <div class="clearfix" id="_PRORATEDPRSL">
+                  <label class="_label">CAPA Submitted Status YTD</label>
+                  <canvas
+                    id="CANVAS_CAPA_COMPLETION_YTD"
+                    width="700"
+                    height="400"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m8 l8 text-center">
+              <div class="block z-depth-1" data-aos="zoom-out">
+                <div class="clearfix" id="_PRORATEDPRSL">
+                  <label class="_label">CAPA Submitted Status MTD</label>
+                  <canvas
+                    id="CANVAS_CAPA_COMPLETION_MTD"
+                    width="700"
+                    height="250"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin: 0">
+            <div class="col s12 m12 l12 text-center">
+              <div
+                class="block z-depth-1"
+                data-aos="zoom-out"
+                id="triggerbackground"
+              >
+                <div class="clearfix" id="_PRORATEDPRSL">
+                  <label class="_label"
+                    >No. of Problem Solvings Taken vs % Trigger Hits by
+                    Individual Team</label
+                  >
+                  <div class="col s12 text-center" style="margin-bottom: 25px">
+                    <div class="date-range-picker-container">
+                      <input
+                        type="text"
+                        name="daterange"
+                        value=""
+                        placeholder="Select date range"
+                        autocomplete="off"
+                        class="date-range-picker-container-input"
+                        readonly
+onchange="onchangeoftriggerchart()"
+                      />
+                    </div>
+
+                    <!-- <select
+                      id="teamSelection"
+                      class="form-control plant dropdown"
+                      style="width: auto; height: 33px"
+                      value=""
+                      onchange="onChangeTeamForProblemSolving(this.value)"
+                    >
+                      <option value="" selected disabled>Select Team</option>
+                    </select> -->
+                  </div>
+                  <div class="col s12">
+                    <div id="chartbg"></div>
+                    <canvas
+                      id="CANVAS_TEAM_PROBLEM_SOLVING"
+                      width="700"
+                      height="120"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin: 0">
+            <div class="col s12 m12 l12 text-center">
+              <div class="block z-depth-1" data-aos="zoom-out">
+                <div class="clearfix" id="_PRORATEDPRSL">
+                  <label class="_label"
+                    >Monthly Team Performance on KPI's</label
+                  >
+                  <div class="col s4 text-center" style="margin-bottom: 25px">
+                    <div class="row">
+                      <div class="col l12">
+                        <h6 style="display: block">Select Team and Date</h6>
+                        <div class="date-range-picker-container">
+                          <input
+                            type="text"
+                            name="daterange"
+                            value=""
+                            class="date-range-picker-container-input"
+                            readonly
+                          />
+                        </div>
+                        <div>
+                          <select
+                            id="KPITeamsGroupSelection"
+                            class="form-control plant dropdown"
+                            style="width: 100%; height: auto; font-size: 15px"
+                            onchange="onSelectKPITeamGroups(this.value)"
+                            multiple
+                          ></select>
+                        </div>
+                      </div>
+                      <div class="col l12">
+                        <h6 style="display: block">Select KPI's</h6>
+                        <div id="selectedTeamsKPI"></div>
+                      </div>
+                      <div class="col l12 text-center mt-4">
+                        <button
+                          class="btn waves-effect waves-light"
+                          type="submit"
+                          name="action"
+                          onclick="onAddKPIToChart()"
+                        >
+                          Add To Chart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s8 mt-3">
+                    <div id="performancebg"></div>
+                    <canvas
+                      id="CANVAS_MONTHLY_KPI_PERFORMANCE"
+                      width="700"
+                      height="180"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/materialize.min.js"></script>
+  <script src="JS/aos.js"></script>
+  <script src="JS/Chart.min.js"></script>
+  <script src="JS/moment.min.js"></script>
+  <script src="JS/main.js"></script>
+
+  <script src="JS/chartjs-plugin-datalabels@0.7.0.js"></script>
+  <script type="text/javascript" src="JS/jquery.min.js"></script>
+  <script type="text/javascript" src="JS/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="JS/jquery.multi-select.min.js"></script>
+</html>

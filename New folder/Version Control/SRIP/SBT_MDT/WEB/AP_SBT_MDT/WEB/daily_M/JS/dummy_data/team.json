@@ -1,0 +1,31 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-13T15:11:14", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-13T14:11:14+0530", "EndDate" : "2021-05-13T15:11:14+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "TEAM_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "SHIFT", "SourceColumn" : "SHIFT", "Description" : "SHIFT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "START_TIME", "SourceColumn" : "START_TIME", "Description" : "START_TIME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "END_TIME", "SourceColumn" : "END_TIME", "Description" : "END_TIME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "OBJECTIVE", "SourceColumn" : "OBJECTIVE", "Description" : "OBJECTIVE", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "TEAM_NAME" : "TECHNOCRATS", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "World Class WPB", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "ELITE", "SHIFT" : "B", "START_TIME" : "3PM", "END_TIME" : "11PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "VAJRAASTRA", "SHIFT" : "A", "START_TIME" : "7AM", "END_TIME" : "3PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Pac KING", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "POLYMER EAGLES", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "SPARTANS", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Trinity Anchors", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "TECHIE TITANS", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Miracle Achivers", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "RoaRing Lions", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Achievers", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Team EKTA", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Aikyam", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Team Tesla", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Alfa Alliance", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" }, 
+		{ "TEAM_NAME" : "Wizards Unite", "SHIFT" : "G", "START_TIME" : "9:30AM", "END_TIME" : "5:30PM", "OBJECTIVE" : "CVCVX" } ]
+		 } ]
+	 }
+ }

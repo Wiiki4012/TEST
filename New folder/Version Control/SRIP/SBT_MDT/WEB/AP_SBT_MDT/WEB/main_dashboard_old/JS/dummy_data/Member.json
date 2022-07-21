@@ -1,0 +1,20 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-19T15:33:46", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-19T14:33:46+0530", "EndDate" : "2021-05-19T15:33:46+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "Name", "SourceColumn" : "Name", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "percent", "SourceColumn" : "percent", "Description" : "", "SQLDataType" : 8, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "Name" : "B Tarun", "percent" : 80.00 }, 
+		{ "Name" : "Teja", "percent" : 80.00 }, 
+		{ "Name" : "Satyaranjan", "percent" : 20.00 }, 
+		{ "Name" : "Varalakshmi", "percent" : 0.00 }, 
+		{ "Name" : "Poorna", "percent" : 0.00 }, 
+		{ "Name" : "Sandeep", "percent" : 80.00 }, 
+		{ "Name" : "Triveni", "percent" : 80.00 }, 
+		{ "Name" : "Peddi Raju", "percent" : 20.00 }, 
+		{ "Name" : "SaiKamal", "percent" : 100.00 } ]
+		 } ]
+	 }
+ }

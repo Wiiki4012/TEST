@@ -1,0 +1,21 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-19T15:02:25", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-19T14:02:25+0530", "EndDate" : "2021-05-19T15:02:25+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "DATE", "SourceColumn" : "DATE", "Description" : "", "SQLDataType" : 93, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "SHIFT", "SourceColumn" : "SHIFT", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "MEETING_AGENDA", "SourceColumn" : "MEETING_AGENDA", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "PLAN_FOR_DAY_1", "SourceColumn" : "PLAN_FOR_DAY_1", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "CRITICAL_FOR_24HR", "SourceColumn" : "CRITICAL_FOR_24HR", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "SBT_MDT_ESCALATION", "SourceColumn" : "SBT_MDT_ESCALATION", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "CODE_OF_CONDUCT", "SourceColumn" : "CODE_OF_CONDUCT", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "STAR_OF_THE_DAY", "SourceColumn" : "STAR_OF_THE_DAY", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "DESC_FOR_STAR_OF_THE_DAY", "SourceColumn" : "DESC_FOR_STAR_OF_THE_DAY", "Description" : "", "SQLDataType" : 1, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "UPDATED_AT", "SourceColumn" : "UPDATED_AT", "Description" : "", "SQLDataType" : 93, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "TEAM_NAME" : "Wizards Unite", "DATE" : "TimeUnavailable", "SHIFT" : "G", "MEETING_AGENDA" : "1) Start with Safety / TOS                                                   Strategic Outcomes\n2) Past 24 hours Performance                                            •SO1-Customer experience-On time service,NPI,Complaints \n3) Plan for the day                                                               •SO2-Purpose driven one team-Material cost,Profitability,Defetcs,Engagement\n4) Support required to achieve plan , 5) Action Planner      •SO3-Safety,Sustainability,Cutting edge technology", "PLAN_FOR_DAY_1" : "", "CRITICAL_FOR_24HR" : "", "SBT_MDT_ESCALATION" : "", "CODE_OF_CONDUCT" : "•  100% Attendance                                    SBT Timings\n•  Participation                                 • A Shift(12:00PM-12:15PM)  \n•  Great Punctuality                         • B Shift(03:30PM-03:45PM)\n•  1 Voice                                         • C Shift(12:00AM-12:15AM)\n•  Don’t Use Mobile phones", "STAR_OF_THE_DAY" : "", "DESC_FOR_STAR_OF_THE_DAY" : "", "UPDATED_AT" : "TimeUnavailable" } ]
+		 } ]
+	 }
+ }

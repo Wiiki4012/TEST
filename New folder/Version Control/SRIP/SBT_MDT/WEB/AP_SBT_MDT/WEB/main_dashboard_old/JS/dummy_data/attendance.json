@@ -1,0 +1,20 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-19T18:14:28", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-19T17:14:28+0530", "EndDate" : "2021-05-19T18:14:28+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "TEAM_MEMBER", "SourceColumn" : "TEAM_MEMBER", "Description" : "TEAM_MEMBER", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "ATTENDANCE", "SourceColumn" : "ATTENDANCE", "Description" : "ATTENDANCE", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "TEAM_MEMBER" : "SaiKamal", "ATTENDANCE" : "P" }, 
+		{ "TEAM_MEMBER" : "Teja", "ATTENDANCE" : "P" }, 
+		{ "TEAM_MEMBER" : "Triveni", "ATTENDANCE" : "P" }, 
+		{ "TEAM_MEMBER" : "Satyaranjan", "ATTENDANCE" : "P" }, 
+		{ "TEAM_MEMBER" : "B Tarun", "ATTENDANCE" : "P" }, 
+		{ "TEAM_MEMBER" : "Peddi Raju", "ATTENDANCE" : "P" }, 
+		{ "TEAM_MEMBER" : "Sandeep", "ATTENDANCE" : "A" }, 
+		{ "TEAM_MEMBER" : "Poorna", "ATTENDANCE" : "A" }, 
+		{ "TEAM_MEMBER" : "Varalakshmi", "ATTENDANCE" : "A" } ]
+		 } ]
+	 }
+ }

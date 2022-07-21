@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://www.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global/resources/images/Favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+<META http-equiv='cache-control' content='no-cache'>
+	<META http-equiv='expires' content='0'>
+	<META http-equiv='pragma' content='no-cache'>
+    <title>SBT/MDT Meetings - Cockpit - 1</title>
+    <link rel="stylesheet" href="CSS/documentation.css" />
+    <link rel="stylesheet" href="CSS/materialize.min.css" />
+    <link rel="stylesheet" href="CSS/animate.min.css" />
+    <link rel="stylesheet" href="CSS/aos.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/XMII/CM/AP_SBT_MDT/main_dashboard/JS/daterangepicker.css" />
+  </head>
+  <body>
+    <div class="_cockpitList">
+      <h1 class="text-center my-3 head-title">
+        <span id="_teamName"></span> 
+      </h1>
+      <div class="input-field col s12 _selectField p-0">
+        <select id="_team" onchange="_lists()">
+          <option value="" disabled selected>Select team</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 materialType">
+          <div class="_content">
+            <h2 class="_title">Team Details</h2>
+            <div>
+              <!--<span
+                class="_downloadExcel"
+                onclick="excelData()"
+                title="Download format"
+                >&#8595;</span
+              >
+              <button
+                type="button"
+                class="waves-effect waves-light btn btnModal"
+                onclick="modal1open()"
+              >
+                Upload
+              </button> -->
+              <button
+                type="button"
+                class="waves-effect waves-light btn btnModal"
+                onclick="modal1openInsert()"
+              >
+                CREATE
+              </button>
+            </div>
+          </div>
+          <div class="table-data">
+            <table id="_sbtList">
+              <thead>
+                <tr>
+                  <th colspan="2">Team Name</th>
+                  <th>Shift</th>
+                  <th>Star of the day</th>
+                  <th>Team Banner</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="7" class="text-center">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col s12 m6 materialType">
+          <div class="_content" style="height: 62px;">
+            <h2 class="_title">Edit Team Members</h2>           
+          </div>
+          <div class="table-data">
+            <table id="_editTeam">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Team Name</th>
+                  <th>Team Member</th>
+                  <th>Edit</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" class="text-center">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col s12 m12 materialType">
+          <div class="_content" style="border-bottom: 1px solid #0d0d0d1f;">
+            <h2 class="_title">Reports</h2> 
+            <div>
+              <input type="text" readonly="" name="_reportdaterange" class="_datepicker" id="_reportdaterange" readonly>
+              </div>          
+          </div>
+          <div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col m12">
+                <h5>Attendance Report</h5> 
+              </div>
+              <div class="col">
+                <button class="btn  waves-effect waves-light" style="background-color: #0984e3;" onclick="memberwiseattendancereport()" type="button">Memberwise Report
+                  <i class="material-icons left">supervisor_account</i>
+                </button>
+              </div>
+              <div class="col">
+                <button class="btn  waves-effect waves-light" style="background-color: rgba(255, 164, 46, 1);" onclick="datewiseattendancereport()" type="button">Datewise Report
+                  <i class="material-icons left">date_range</i>
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m12">
+                <h5>Other Reports</h5> 
+              </div>
+              <div class="col">
+                <button class="btn  waves-effect waves-light" style="background-color: #cd84f1;" onclick="maindashboardreport()" type="button">Main Dashboard Report
+                  <i class="material-icons left">dashboard</i>
+                </button>
+              </div>
+              <div class="col">
+                <button class="btn  waves-effect waves-light" style="background-color: #44bd32;" onclick="kpireport()" type="button">KPI Report
+                  <i class="material-icons left">vpn_key</i>
+                </button>
+              </div>
+              <div class="col">
+                <button class="btn  waves-effect waves-light" style="background-color: #e74c3c;" onclick="psreport()" type="button">CAPA Report
+                  <i class="material-icons left">backspace</i>
+                </button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/materialize.min.js"></script>
+  <script src="JS/aos.js"></script>
+  <script src="JS/Chart.min.js"></script>
+  <script src="JS/chartjs-plugin-datalabels@0.7.0.js"></script>
+  <script src="JS/moment.min.js"></script>
+  <script src="JS/script.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.full.min.js"
+  ></script>
+  <script type="text/javascript" src="/XMII/CM/AP_SBT_MDT/main_dashboard/JS/daterangepicker.min.js"></script>
+</html>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal _modal">
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title">SBT Team Details</h1>
+      <a class="modal-close waves-effect waves-green _closeIcon">x</a>
+
+      <div class="_uploadFile">
+        <label class="_label col s12 p-0">Upload File</label>
+        <input
+          class="inputField"
+          type="file"
+          onclick="selectFile()"
+          id="fileUpload"
+          accept=".xls,.xlsx,.csv"
+        />
+        <div class="progress" id="_progress" style="display: none">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+      <div class="_submit text-center">
+        <span id="_error1"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal1Create" class="modal _modal">
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title"> Create Team Details
+      </h1>
+      <form class="col s12 p-0">
+        <div class="row">
+          <div class="input-field col s12" style="margin-bottom:0">
+            <label for="Team Name" style="margin-top:-23px;">Team Name</label>
+            <div class="row">
+              <div class="input-field col s4" style="margin:0px !important;padding-left:0;">
+                <select id="_teamtype" style="margin-top:23px; " required>
+                  <option value="" disabled selected>SBT/MDT/DBT </option>             
+                  <option value="SBT - ">SBT</option>             
+                  <option value="MDT - ">MDT</option>             
+                  <option value="DBT - ">DBT</option> 
+                  </select>
+              </div>
+              <div class="input-field col s8" style="padding-left:0px;">
+                <input 
+                    id="_team_name"
+                    placeholder="Team Name"
+                    type="text"
+                    class="validate"
+                  />
+              </div>
+            </div>
+            
+          </div>
+          <div class="inputfield col s12" style="margin-top:0; padding-bottom:25px;">
+            <label class="_dropdown">Shift </label>
+            <select id="_shift">
+              <option value="" disabled selected>Select Shift </option>             
+              <option value="A">A</option>             
+              <option value="B">B</option>             
+              <option value="C">C</option>             
+              <option value="G">G</option>             
+            </select>            
+          </div>
+           <!--- <div class="inputfield col s12">
+           <label for="Team Name">Objective</label>
+            <textarea 
+              id="objective"
+              placeholder="Objective"
+              type="text"
+              class="validate"
+            > </textarea>
+            
+          </div>-->
+        </div> 
+        <div class="_submit text-center" id="btn_sbt">          
+                  <div class="_err" id="sbt_err"></div>
+                  <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+          <button type="button" onclick="sbtInsert()" class="waves-effect  modal-close- waves-light btn btnModal">Submit</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="closeModal" class="modal _modal _close">
+  <div class="modal-content">
+    <h6 id="_deleteTeam"></h6>
+    <div class="_para">
+      Are you sure you want to delete?
+    </div>
+    <div class="_submit _deS">     
+      <button type="button" class="modal-close waves-effect waves-light btn btnCancel">Cancel</a>
+      <button type="button" class="waves-effect waves-light btn btnOk" onclick="deleteSBTData()">Ok</a>
+    </div>
+  </div>
+</div>
+
+<div id="_uploadFile" class="modal _modal">
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title" id="uploadTeam"></h1>
+      <a class="modal-close waves-effect waves-green _closeIcon">x</a>
+
+      <div class="_uploadFile">
+        <label class="_label col s12 p-0">Upload Image</label>
+        <input
+          class="inputField"
+          type="file"
+          onchange="uploadFile(event)"
+          id="filebase64"
+          accept="image/*"
+        />
+        <img src="" id="_uploadImg" class="uploadTeam">
+        <div class="_err" id="_noData">No Data!</div>
+      </div>
+      <div class="_submit text-center" id="btn_banner"> 
+        <input type="hidden" id="_base64Img">         
+        <div class="_err" id="sbt_banner"></div>
+        <div class="progress">
+          <div class="indeterminate"></div>
+      </div>
+      <button type="button" onclick="bannerData()" class="waves-effect  modal-close- waves-light btn btnModal">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="_uploadStar" class="modal _modal">
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title" id="uploadStarTeamName"></h1>
+      <a class="modal-close waves-effect waves-green _closeIcon">x</a>
+
+      <div class="_uploadFile">
+        <label class="_label col s12 p-0">Upload Image</label>
+        <input
+          class="inputField"
+          type="file"
+          onchange="uploadFilestar(event)"
+          id="filebase64"
+          accept="image/*"
+        />
+        <img src="" id="_uploadImgstar" class="uploadTeam">
+        <div class="_err" id="_noDataStar">No Data!</div>
+      </div>
+      <div class="_submit text-center" id="btn_star"> 
+        <input type="hidden" id="_base64ImgStar">         
+        <div class="_err" id="sbt_star"></div>
+        <div class="progress">
+          <div class="indeterminate"></div>
+      </div>
+      <button type="button" onclick="starData()" class="waves-effect  modal-close- waves-light btn btnModal">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="memberEdit" class="modal _modal">
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title"> Team Members
+      </h1>
+      <form class="col s12 p-0">
+        <div class="row">
+          
+
+          <div class="input-field col s12">
+            <input 
+              id="_teamMember"
+              placeholder="Team Member"
+              type="text"
+              class="validate"
+            />
+            <label for="Team Member">Team Member</label>
+          </div>
+          
+        </div> 
+        <div class="_submit text-center" id="btn_member"> 
+          <input type="hidden" id="_sno">         
+          <input type="hidden" id="_Memberteam_Name">         
+                  <div class="_err" id="member_err"></div>
+                  <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+          <button type="button" onclick="memberUpdate()" class="waves-effect  modal-close- waves-light btn btnModal">Submit</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="editteams" class="modal _modal">
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title"> Edit Team - <span id="teamnameedit"></span>
+      </h1>
+      <form class="col s12 p-0">
+        <div class="row">
+          
+
+          <div class="input-field col s12">
+            <select id="MDTteams">
+              <option value="" disabled selected>Select MDT </option>             
+            </select>  
+          </div>
+          
+        </div> 
+        <div class="_submit text-center" id="btn_member"> 
+          <input type="hidden" id="teamnamefield">         
+          <button type="button" onclick="teamupdate()" class="waves-effect  modal-close- waves-light btn btnModal">Submit</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

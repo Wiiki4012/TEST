@@ -1,0 +1,24 @@
+ { "Rowsets" : { 
+	"DateCreated" : "2021-05-18T08:19:07", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-18T07:19:07+0530", "EndDate" : "2021-05-18T08:19:07+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+            { "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "TEAM_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "DATE", "SourceColumn" : "DATE", "Description" : "DATE", "SQLDataType" : 91, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "SHIFT", "SourceColumn" : "SHIFT", "Description" : "SHIFT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "GRAPH_ID", "SourceColumn" : "GRAPH_ID", "Description" : "GRAPH_ID", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "KPI_NAME", "SourceColumn" : "KPI_NAME", "Description" : "KPI_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "VALUE", "SourceColumn" : "VALUE", "Description" : "VALUE", "SQLDataType" : 8, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "KPI_TYPE", "SourceColumn" : "KPI_TYPE", "Description" : "KPI_TYPE", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+            { "Name" : "MONTHLY_VALUE", "SourceColumn" : "MONTHLY_VALUE", "Description" : "MONTHLY_VALUE", "SQLDataType" : 8, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "TEAM_NAME" : "1", "DATE" : "04/15/2021 00:00:00", "SHIFT" : "1", "GRAPH_ID" : "1", "KPI_NAME" : "test", "VALUE" : "", "KPI_TYPE" : "Godwin", "MONTHLY_VALUE" : "" }, 
+		{ "TEAM_NAME" : "1", "DATE" : "04/15/2021 00:00:00", "SHIFT" : "1", "GRAPH_ID" : "1", "KPI_NAME" : "", "VALUE" : "", "KPI_TYPE" : "Godwin", "MONTHLY_VALUE" : "" }, 
+		{ "TEAM_NAME" : "1", "DATE" : "04/15/2021 00:00:00", "SHIFT" : "1", "GRAPH_ID" : "1", "KPI_NAME" : "", "VALUE" : "", "KPI_TYPE" : "Godwin", "MONTHLY_VALUE" : "" }, 
+		{ "TEAM_NAME" : "1", "DATE" : "04/15/2021 00:00:00", "SHIFT" : "1", "GRAPH_ID" : "1", "KPI_NAME" : "", "VALUE" : "", "KPI_TYPE" : "Godwin", "MONTHLY_VALUE" : "" }, 
+		{ "TEAM_NAME" : "1", "DATE" : "04/15/2021 00:00:00", "SHIFT" : "1", "GRAPH_ID" : "1", "KPI_NAME" : "", "VALUE" : "", "KPI_TYPE" : "Godwin", "MONTHLY_VALUE" : "" }, 
+		{ "TEAM_NAME" : "1", "DATE" : "04/15/2021 00:00:00", "SHIFT" : "1", "GRAPH_ID" : "1", "KPI_NAME" : "", "VALUE" : "", "KPI_TYPE" : "Godwin", "MONTHLY_VALUE" : "" } 
+		 ]
+		 } ]
+	 }
+ }

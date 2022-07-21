@@ -1,0 +1,28 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-21T16:04:12", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-21T15:04:12+0530", "EndDate" : "2021-05-21T16:04:12+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "SNO", "SourceColumn" : "SNO", "Description" : "SNO", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "TEAM_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "TEAM_MEMBER", "SourceColumn" : "TEAM_MEMBER", "Description" : "TEAM_MEMBER", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "SNO" : "10", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "11", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "12", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "13", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "14", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "15", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "16", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "" }, 
+		{ "SNO" : "1", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "SaiKamal" }, 
+		{ "SNO" : "2", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Sandeep" }, 
+		{ "SNO" : "3", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Teja" }, 
+		{ "SNO" : "4", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Poorna" }, 
+		{ "SNO" : "5", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Triveni" }, 
+		{ "SNO" : "6", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Satyaranjan" }, 
+		{ "SNO" : "7", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Varalakshmi" }, 
+		{ "SNO" : "8", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "B Tarun" }, 
+		{ "SNO" : "9", "TEAM_NAME" : "TECHNOCRATS", "TEAM_MEMBER" : "Peddi Raju" } ]
+		 } ]
+	 }
+ }

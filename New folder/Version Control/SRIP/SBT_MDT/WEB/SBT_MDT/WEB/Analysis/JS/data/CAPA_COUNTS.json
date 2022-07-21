@@ -1,0 +1,15 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-07-15T21:36:31", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-07-15T20:36:31+0530", "EndDate" : "2021-07-15T21:36:31+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "Total_CAPA", "SourceColumn" : "Total_CAPA", "Description" : "Total_CAPA", "SQLDataType" : -5, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "COMPLETED", "SourceColumn" : "COMPLETED", "Description" : "COMPLETED", "SQLDataType" : 4, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "Beyond_Target", "SourceColumn" : "Beyond_Target", "Description" : "Beyond_Target", "SQLDataType" : 4, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "Within_Target", "SourceColumn" : "Within_Target", "Description" : "Within_Target", "SQLDataType" : 4, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "PENDING", "SourceColumn" : "PENDING", "Description" : "PENDING", "SQLDataType" : 4, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "Total_CAPA" : 422, "COMPLETED" : 294, "Beyond_Target" : 1, "Within_Target" : 418, "PENDING" : 128 } ]
+		 } ]
+	 }
+ }

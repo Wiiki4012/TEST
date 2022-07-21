@@ -1,0 +1,29 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-18T08:19:07", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-18T07:19:07+0530", "EndDate" : "2021-05-18T08:19:07+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "SNO", "SourceColumn" : "SNO", "Description" : "SNO", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "TEAM_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "SOURCE", "SourceColumn" : "SOURCE", "Description" : "SOURCE", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "WHAT", "SourceColumn" : "WHAT", "Description" : "WHAT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "CREATION_DATE", "SourceColumn" : "CREATION_DATE", "Description" : "CREATION_DATE", "SQLDataType" : 91, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "CLOSURE_DATE", "SourceColumn" : "CLOSURE_DATE", "Description" : "CLOSURE_DATE", "SQLDataType" : 91, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "WHO", "SourceColumn" : "WHO", "Description" : "WHO", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "LAST_UPDATED", "SourceColumn" : "LAST_UPDATED", "Description" : "LAST_UPDATED", "SQLDataType" : 91, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "COMMENTS", "SourceColumn" : "COMMENTS", "Description" : "COMMENTS", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "STATUS", "SourceColumn" : "STATUS", "Description" : "STATUS", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "STATUS_OF_ACT", "SourceColumn" : "STATUS_OF_ACT", "Description" : "STATUS_OF_ACT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "SNO" : "281", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "PM-102 DCP low viscosity", "CREATION_DATE" : "04/15/2021 00:00:00", "CLOSURE_DATE" : "04/25/2021 00:00:00", "WHO" : "Godwin", "LAST_UPDATED" : "04/15/2021 00:00:00", "COMMENTS" : "PM-102 DCP low viscosity", "STATUS" : "Open", "STATUS_OF_ACT" : "Closed" }, 
+		{ "SNO" : "269", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "PO closed in auto", "CREATION_DATE" : "04/10/2021 00:00:00", "CLOSURE_DATE" : "04/22/2021 00:00:00", "WHO" : "Vinit T", "LAST_UPDATED" : "04/21/2021 00:00:00", "COMMENTS" : "PM-107 PO closed in auto", "STATUS" : "Open", "STATUS_OF_ACT" : "Closed" }, 
+		{ "SNO" : "264", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "UP1 Po creating and Releasing", "CREATION_DATE" : "04/07/2021 00:00:00", "CLOSURE_DATE" : "04/11/2021 00:00:00", "WHO" : "Sitara", "LAST_UPDATED" : "04/10/2021 00:00:00", "COMMENTS" : "UP1 10L PO issue", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" }, 
+		{ "SNO" : "285", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "SETU down", "CREATION_DATE" : "04/15/2021 00:00:00", "CLOSURE_DATE" : "04/25/2021 00:00:00", "WHO" : "Vinit T", "LAST_UPDATED" : "04/17/2021 00:00:00", "COMMENTS" : "SETU down", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" }, 
+		{ "SNO" : "291", "TEAM_NAME" : "Pac KING", "SOURCE" : "MAESTRO - Shade Volume (Daily) - KL SO1", "WHAT" : "LOw VOlume in Shade line", "CREATION_DATE" : "04/18/2021 00:00:00", "CLOSURE_DATE" : "04/25/2021 00:00:00", "WHO" : "Chinmay", "LAST_UPDATED" : "04/18/2021 00:00:00", "COMMENTS" : "Water Leakage from fire hydrent line", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" }, 
+		{ "SNO" : "301", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "WPl diff in AY2 Product", "CREATION_DATE" : "04/23/2021 00:00:00", "CLOSURE_DATE" : "05/03/2021 00:00:00", "WHO" : "Godwin", "LAST_UPDATED" : "04/23/2021 00:00:00", "COMMENTS" : "WPL difference AY2", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" }, 
+		{ "SNO" : "302", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME - BD Related to STV (Daily)- Mins SO3", "WHAT" : "Spilage in STV loop", "CREATION_DATE" : "04/16/2021 00:00:00", "CLOSURE_DATE" : "04/30/2021 00:00:00", "WHO" : "Bagavatheswaran", "LAST_UPDATED" : "04/23/2021 00:00:00", "COMMENTS" : "STV 26 spillage in loop", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" }, 
+		{ "SNO" : "308", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "Lid fitment issue in 10L", "CREATION_DATE" : "04/28/2021 00:00:00", "CLOSURE_DATE" : "05/08/2021 00:00:00", "WHO" : "Godwin", "LAST_UPDATED" : "04/28/2021 00:00:00", "COMMENTS" : "Lid fitment issue to 10L hitech", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" }, 
+		{ "SNO" : "309", "TEAM_NAME" : "Pac KING", "SOURCE" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "WHAT" : "EMS 2 not taking Pallets", "CREATION_DATE" : "04/28/2021 00:00:00", "CLOSURE_DATE" : "05/08/2021 00:00:00", "WHO" : "Bagavatheswaran", "LAST_UPDATED" : "04/28/2021 00:00:00", "COMMENTS" : "EMS 2", "STATUS" : "Open", "STATUS_OF_ACT" : "Pending" } ]
+		 } ]
+	 }
+ }

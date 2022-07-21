@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <TITLE>SBT/MDT - SRIP</TITLE>
+    <META http-equiv="X-UA-Compatible" content="IE=edge">
+    <META http-equiv='cache-control' content='no-cache'>
+    <META http-equiv='expires' content='0'>
+    <META http-equiv='pragma' content='no-cache'>
+    <link rel="stylesheet" href="CSS/materialize.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+ 
+
+</HEAD>
+
+<BODY>
+
+    <div class="row">
+        <div class="col s12">
+           
+            <ul class="tabs">
+	   <li class="tab col s2"><a class="active" href="#main_dashboard"> <b><p style = 'color:black'>Dashboard</p></b></a></li>
+                <li class="tab col s2"><a href="#daily"><b><p style = 'color:black'>Daily</p></b></a></li>
+                <li class="tab col s3"><a href="#capa"><b><p style = 'color:black'>CAPA - Problem Solving</p></b></a></li>
+                <li class="tab col s2"><a href="#monthly"><b><p style = 'color:black'>Monthly</p></b></a></li>
+                <li class="tab col s3"><a href="#analysis"><b><p style = 'color:black'>Analysis</p></b></a></li>
+	    </ul>
+  
+        </div>
+        <div id="main_dashboard" class="col s12 m12" style="margin-top: 15px; position:relative">
+            <iframe
+                src='http://172.16.90.107:50000/XMII/CM/AP_SBT_MDT/main_dashboard/index.html?IllumLoginName=ap_cmn_srip&IllumLoginPassword=Pass12345'
+                frameborder='0' allowfullscreen scrolling='yes'></iframe>
+        </div>
+        <div id="daily" class="col s12 m12" style="margin-top: 15px;">
+            <iframe
+                src='http://172.16.90.107:50000/XMII/CM/AP_SBT_MDT/daily/index.html?IllumLoginName=ap_cmn_srip&IllumLoginPassword=Pass12345'
+                frameborder='0' allowfullscreen scrolling='yes'></iframe>
+        </div>
+        <div id="capa" class="col s12 m12" style="margin-top: 15px;">
+            <iframe
+                src='http://172.16.90.107:50000/XMII/CM/SBT_MDT/CAPA/index.html?IllumLoginName=ap_cmn_srip&IllumLoginPassword=Pass12345'
+                frameborder='0' allowfullscreen scrolling='yes'></iframe>
+        </div>
+        <div id="monthly" class="col s12 m12" style="margin-top: 15px;">
+            <iframe
+                src='http://172.16.90.107:50000/XMII/CM/AP_SBT_MDT/monthly/index.html?IllumLoginName=ap_cmn_srip&IllumLoginPassword=Pass12345'
+                frameborder='0' allowfullscreen scrolling='yes'></iframe>
+        </div>
+        <div id="analysis" class="col s12 m12" style="margin-top: 15px;">
+            <iframe
+                src='http://172.16.90.107:50000/XMII/CM/SBT_MDT/Analysis/index.html?IllumLoginName=ap_cmn_srip&IllumLoginPassword=Pass12345'
+                frameborder='0' allowfullscreen scrolling='yes'></iframe>
+        </div>
+    </div>
+    </div>
+
+</BODY>
+<script src="JS/jquery.min.js"></script>
+<script src="JS/materialize.min.js"></script>
+<script src="JS/script.js"></script>
+
+</HTML>

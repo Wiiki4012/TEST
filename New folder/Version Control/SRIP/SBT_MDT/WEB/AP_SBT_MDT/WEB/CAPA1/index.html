@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <META http-equiv='cache-control' content='no-cache'>
+        <META http-equiv='expires' content='0'>
+        <META http-equiv='pragma' content='no-cache'>
+        <link rel="icon" href="https://www.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global/resources/images/Favicon.png" type="image/gif" sizes="16x16"/>
+        <title>SBT/MDT Meetings - CAPA</title>
+        <link rel="stylesheet" href="CSS/documentation.css" />
+        <link rel="stylesheet" href="CSS/materialize.min.css" />
+        <link rel="stylesheet" href="CSS/animate.min.css" />
+        <link rel="stylesheet" href="CSS/aos.css" />
+        <link rel="stylesheet" href="CSS/style.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/daterangepicker.css"/>
+    </head>
+    <body>
+        <div class="_List">
+            <h1 class="text-center my-3 head-title" id="_team"></h1>
+            <div class="notification-box" id="triggerhitnotification" onclick="triggermodal()">
+                <span class="notification-count" id="triggerhitcount">0</span>
+                <div class="notification-bell">
+                    <span class="bell-top"></span>
+                    <span class="bell-middle"></span>
+                    <span class="bell-bottom"></span>
+                    <span class="bell-rad"></span>
+                </div>
+            </div>
+            <div class="_contentDrop col s12 p-0">
+                <select
+                    class="_selectField"
+                    id="_TECHNOCRATS"
+                    onchange="listChart(this)"
+                    ></select>
+            </div>
+        </div>
+        <div class="_dataLists">
+            <div class="row _boxContent">
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Problem Solving (Open) (MTD) <br />
+                        <span id="_PSOMTD"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Problem Solving (Closed) (MTD)
+                        <br />
+                        <span id="_PSCMTD"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Total No. of Problem Solving (MTD) <br />
+                        <span id="_TPSMTD"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Avg. Delay of Closure (YTD)<br />
+                        <span id="_ADCYTD"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Overall Problem Solving (Open) <br />
+                        <span id="_OPSO"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Problem Solving (Closed) (YTD)<br />
+                        <span id="_PSCYTD"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Total No. of Problem Solving (YTD) <br />
+                        <span id="_TPSYTD"> 0</span>
+                    </div>
+                </div>
+                <div class="_content col s6 m4 l3">
+                    <div class="PosT">
+                        Average Days of  Closure (YTD) <br />
+                        <span id="_AVDCYTD"> 0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="_tableDateList col 12">
+                    <div class="_dateT">
+                        <h4 class="_tableT">Problem solving's</h4>
+                        <!--<div class="_date">
+                            <input type="text" name="_daterange" id="_daterange" class="_daterange" readonly />
+                            <button type="button" class="btn btnData" onclick="_download()">Download .xls</button>
+                        </div>
+                        <div class="_date">
+                            <div class="star">
+                                Highest No. of  Problem Solving (YTD) <br />
+                                <span id="membername"> </span>
+                            </div>
+                        </div>-->
+                        <div class="_date">
+                            <input type="text" name="_daterangeTable" id="_daterangeTable" readonly onchange="_table()" class="_daterange" />
+                            <button type="button" class="btn btnData" onclick="modal1open('')">+ Create</button>
+                        </div>
+                    </div>
+                    <div class="table-data">
+                        <table id="_tasks">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">KPI</th>
+                                    <th>What is the problem</th>
+                                    <th>Date of allocatione</th>
+                                    <th>Date of submission</th>
+                                    <th>Participants</th>
+                                    <th>Status of problem solving</th>
+                                    <th>Comments</th>
+                                    <th>Assessment Status</th>
+                                    <th>Action<br>(Edit/Open)</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="11" class="text-center">Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="_tableDateList col 12">
+                    <div class="_dateT">
+                        <h4 class="_tableT">Actionable's</h4>
+                        <!--<div class="_date">
+                            <input type="text" name="_daterange" id="_daterange" class="_daterange" readonly />
+                            <button type="button" class="btn btnData" onclick="_download()">Download .xls</button>
+                        </div>
+                        <div class="_date">
+                            <div class="star">
+                                Highest No. of  Problem Solving (YTD) <br />
+                                <span id="membername"> </span>
+                            </div>
+                        </div>-->
+                        <div class="_date">
+                            <button type="button" class="btn btnData" onclick="modal2open('')">+ Create</button>
+                        </div>
+                    </div>
+                    <div class="table-data">
+                        <table id="_tableActionable">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">KPI</th>
+                                    <th>What</th>
+                                    <th>Creation Date</th>
+                                    <th>Closure Date</th>
+                                    <th>Who</th>
+                                    <th>Last Updated On</th>
+                                    <th>Status of Actionable</th>
+                                    <th>Comments</th>
+                                    <th>Edit</th>
+                                    <th>Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td colspan="11" class="text-center">Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/materialize.min.js"></script>
+    <script src="JS/aos.js"></script>
+    <script src="JS/Chart.min.js"></script>
+    <script src="JS/chartjs-plugin-datalabels@0.7.0.js"></script>
+    <script src="JS/moment.min.js"></script>
+    <script src="JS/html2canvas.js"></script>
+    <script src="JS/jspdf.umd.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script
+        type="text/javascript"
+        src="JS/daterangepicker.min.js"
+        ></script>
+</html>
+<div id="modal1" class="modal _modal">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0">X</a>
+        <div class="row">
+            <h1 class="head-title">
+                <span id="wipT"></span>&nbsp;5 Why Analysis/CAPA 
+            </h1>
+            <form class="col s12 p-0">
+                <div class="row">
+                    <div class="inputfield col s3">
+                        <label>KPI : <span style="color:red">*</span></label>
+                        <select id="_kpi" class="_kpi">
+                            <option value="" disabled selected>Select KPI </option>
+                        </select>
+                    </div>
+                    <div class="col s3">
+                        <label for="_Kpi_hit_on">KPI Hit On : <span style="color:red">*</span></label>
+                        <input type="text" name="_Kpi_hit_on" maxlength="30" id="_Kpi_hit_on" class="_Kpi_hit_on" placeholder="KPI Hit On" readonly/>
+                    </div>
+                    <div class="col s3">
+                        <label for="_creationDate">Date of Allocation : <span style="color:red">*</span></label>
+                        <input type="text" name="_creationDate" id="_creationDate" class="_creationDate" placeholder="Select Date" readonly/>
+                    </div>
+                    <div class="col s3">
+                        <label for="_submissiondate">Date of Submission : <span style="color:red">*</span></label>
+                        <input type="text" name="_submissiondate" id="_submissiondate" class="_closureDate" placeholder="Select Date" readonly/>
+                    </div>
+ <div class="inputfield col s12">
+                                <label for="_participants">Participants Names : <span style="color:red">*</span></label>
+                                <input type="text" name="_participants" id="_participants" class="_participants" placeholder="Participants Names" />
+                            </div>
+                    <div class="inputfield col s6" style="padding-left:0;">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row boxstep">
+                                    <label class="inputfield col s12" style="text-decoration:underline">Step 1 : Define the problem</label>
+                                    <div class="inputfield col s6">
+                                        <label for="step1what">What :</label>
+                                        <input type="text" name="step1what" id="step1what" placeholder="what" />
+                                    </div>
+                                    <div class="inputfield col s6">
+                                        <label for="step1where">Where :</label>
+                                        <input type="text" name="step1where" id="step1where" placeholder="Where" />
+                                    </div>
+                                    <div class="inputfield col s6">
+                                        <label for="step1when">When :</label>
+                                        <input type="text" name="step1when" id="step1when" placeholder="When" />
+                                    </div>
+                                    <div class="inputfield col s6">
+                                        <label for="step1who">Who :</label>
+                                        <input type="text" name="step1who" id="step1who" placeholder="Who" />
+                                    </div>
+                                    <div class="inputfield col s6">
+                                        <label for="step1why">Why :</label>
+                                        <input type="text" name="step1why" id="step1why" placeholder="Why" />
+                                    </div>
+                                    <div class="inputfield col s6">
+                                        <label for="howbig">How Big? :</label>
+                                        <input type="text" name="howbig" id="howbig" placeholder="How Big?" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputfield col s6" style="padding-right:0;">
+                        <div class="row boxstep">
+                            <label class="inputfield col s12" style="text-decoration:underline">STEP 2(A) : DATA MEASUREMENT & INFORMATION & Evidence (Onedrive/Google Drive Link)</label>
+                            <div class="inputfield col s12">
+                                <textarea class="textArea" maxlength="250" id="evidance" placeholder="DATA MEASUREMENT & INFORMATION & Evidence"></textarea>
+                            </div>
+                            <label class="inputfield col s12">CORRECTION (What was done to keep the process/machine running) :</label>
+                            <div class="inputfield col s12">
+                                <textarea class="textArea" maxlength="250" id="correction" placeholder="CORRECTION"></textarea>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:3vh">
+                            <div class="col s6">
+                                <label for="brainstorming">Brainstorming tool</label>
+                                <input type="text" name="brainstorming" id="brainstorming" placeholder="Brainstorming tool" />
+                            </div>
+                            <div class="col s6">
+                                <label for="problem">Problem</label>
+                                <input type="text" name="problem" id="problem" placeholder="Problem" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="row boxstep" style="padding-bottom:3vh">
+                            <label class="inputfield col s12" style="color: #3c3a3a !important;font-size: 1.1em !important;text-decoration:underline" >Step 3 - Analyse</label>
+                            <div class="col s2">
+                                <label for="analyseman">Man</label>
+                                <input type="text" name="analyseman" id="analyseman" placeholder="Man" />
+                            </div>
+                            <div class="col s2">
+                                <label for="analysemethod">Method</label>
+                                <input type="text" name="analysemethod" id="analysemethod" placeholder="Method" />
+                            </div>
+                            <div class="col s2">
+                                <label for="analysemeasurement">Measurement</label>
+                                <input type="text" name="analysemeasurement" id="analysemeasurement" placeholder="Measurement" />
+                            </div>
+                            <div class="col s2">
+                                <label for="analysemachine">Machine</label>
+                                <input type="text" name="analysemachine" id="analysemachine" placeholder="Machine" />
+                            </div>
+                            <div class="col s2">
+                                <label for="analysematerial">Material</label>
+                                <input type="text" name="analysematerial" id="analysematerial" placeholder="Material" />
+                            </div>
+                            <div class="col s2">
+                                <label for="analyseenvironment">Enviornment</label>
+                                <input type="text" name="analyseenvironment" id="analyseenvironment" placeholder="Enviornment" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12" style="padding-top: 4vh;">
+                        <div class="row">
+                            <div class="col s6" style="padding-left:0;">
+                                <div class="row">
+                                    <label style="text-decoration:underline">5 Why / FAULT TREEE ANALYSIS FOR:</label>
+                                    <div class="col s12" style="padding-left:0;">
+                                        <div class="row table-data">
+                                            <table id="_5why">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Main Cause</th>
+                                                        <th>Sub Cause</th>
+                                                        <th>Sub Cause</th>
+                                                        <th>Sub Cause</th>
+                                                        <th>Root Cause</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="5whytbody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col s3" style="padding-left:0;">
+                                        <input type="text" name="maincause" id="maincause" placeholder="Main Cause" />
+                                    </div>
+                                    <div class="col s2">
+                                        <input type="text" name="subcause1" id="subcause1" placeholder="Sub Cause" />
+                                    </div>
+                                    <div class="col s2">
+                                        <input type="text" name="subcause2" id="subcause2" placeholder="Sub Cause" />
+                                    </div>
+                                    <div class="col s2">
+                                        <input type="text" name="subcause3" id="subcause3" placeholder="Sub Cause" />
+                                    </div>
+                                    <div class="col s3">
+                                        <input type="text" name="rootcause" id="rootcause" placeholder="5why Root Cause (RC)" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">
+                                        </div>
+                                        <div class="col s4 text-center">
+                                            <button type="button" class="waves-effect waves-light btn blue-grey darken-4" onclick="add5why()">Add</button>
+                                           <!---- <button type="button" class="waves-effect waves-light btn light-blue darken-4" onclick="clear5why()">Clear</button>-->
+                                        </div>
+                                        <div class="col s4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s6" style="padding-right:0;">
+                                <div class="row boxstep">
+                                    <label class="ol s12" style="text-decoration:underline">STEP 4 : <span style="font-size:10px; color:seagreen; text-decoration:none">CAPA (CA - For the RC, same problem will never recur, PA - All potential problems due to
+                                    identified RC is eliminated)</span></label>
+                                    <div class="col s12" style="padding-right:0;">
+                                        <div class="row table-data">
+                                            <table id="_capa">
+                                                <thead>
+                                                    <tr>
+                                                        <th>CAPA</th>
+                                                        <th>What</th>
+                                                        <th>Who</th>
+                                                        <th>When</th>
+                                                        <th>Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="CAPAtbody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col s3" >
+                                        <input type="text" name="CAPA" id="CAPA" placeholder="CA/PA" />
+                                    </div>
+                                    <div class="col s2">
+                                        <input type="text" name="capawhat" id="capawhat" placeholder="What" />
+                                    </div>
+                                    <div class="col s2">
+                                        <input type="text" name="capawho" id="capawho" placeholder="Who" />
+                                    </div>
+                                    <div class="col s2">
+                                        <input type="text" name="capawhen" id="capawhen" placeholder="When" />
+                                    </div>
+                                    <div class="col s3" style="padding-right:0;">
+                                        <input type="text" name="capastatus" id="capastatus" placeholder="Status" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s4">
+                                        </div>
+                                        <div class="col s4 text-center">
+                                            <button type="button" class="waves-effect waves-light btn blue-grey darken-4" onclick="addcapa()">Add</button>
+                                           <!----  <button type="button" class="waves-effect waves-light btn light-blue darken-4" onclick="clearCAPA()">Clear</button>--->
+                                        </div>
+                                        <div class="col s4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 4vh;">
+                            <div class="col s6" style="padding-left:0;">
+                                <div class="row">
+                                    <label class="inputfield col s12">PM Schedule</label>
+                                    <div class="inputfield col s12">
+                                        <textarea class="textArea" maxlength="250" id="pmschedule" placeholder="PM Schedule"></textarea>
+                                    </div>
+                                    <label class="inputfield col s12">Others</label>
+                                    <div class="inputfield col s12">
+                                        <textarea class="textArea" maxlength="250" id="others" placeholder="Others"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s6" style="padding-right:0;">
+                                <div class="row boxstep">
+                                    <label class="inputfield col s12" style="text-decoration:underline">STEP 5 : CONTROL (Make it Stick) CONFIRMATION</label>
+                                    <div class="col s12" style="padding-top:1vh; padding-bottom: 2vh;">
+                                        <div class="row">
+                                            <div class="col s4" style="padding-left: 0;">
+                                                <label style="text-decoration:underline">Make It Stick:</label>
+                                            </div>
+                                            <div class="col s3" style="padding-left: 0;">
+                                                <label>
+                                                <input type="checkbox" id="OPL" value="OPL" class="filled-in"  />
+                                                <span>OPL</span>
+                                                </label>
+                                            </div>
+                                            <div class="col s4" style="padding-left: 0;">
+                                                <label>
+                                                <input type="checkbox" id="SOP" value="SOP" class="filled-in"  />
+                                                <span>SOP</span>
+                                                </label>
+                                            </div>
+                                            <div class="col s4" style="padding-left: 0;">
+                                                <label>
+                                                <input type="checkbox" id="Training" value="Training"  class="filled-in"  />
+                                                <span>Training</span>
+                                                </label>
+                                            </div>
+                                            <div class="col s3" style="padding-left: 0;">
+                                                <label>
+                                                <input type="checkbox" id="Gemba"  value="Gemba"  class="filled-in"  />
+                                                <span>Gemba</span>
+                                                </label>
+                                            </div>
+                                            <div class="col s5" style="padding-left: 0;">
+                                                <label>
+                                                <input type="checkbox" id="pokeyoke" value="Poke Yoke/Modification" class="filled-in"  />
+                                                <span>Poke Yoke/Modification</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s6">
+                                        <label for="preparedby">Prepared By <span style="color:red">*</span></label>
+                                        <input type="text" name="preparedby" id="preparedby" placeholder="Prepared By" />
+                                    </div>
+                                    <div class="col s6">
+                                        <label for="preparedbydate">Date</label>
+                                        <input type="text" name="preparedbydate" id="preparedbydate" placeholder="Select Date" readonly/>
+                                    </div>
+                                    <div class="col s6">
+                                        <label for="reviewedby">Reviewed By</label>
+                                        <input type="text" name="reviewedby" id="reviewedby" placeholder="Reviewed By" />
+                                    </div>
+                                    <div class="col s6">
+                                        <label for="reviewedbydate">Date</label>
+                                        <input type="text" name="reviewedbydate" id="reviewedbydate" placeholder="Select Date" readonly/>
+                                    </div>
+                                    <div class="col s6">
+                                        <label for="assessedby">Assessed By</label>
+                                        <input type="text" name="assessedby" id="assessedby" placeholder="Assessed By" />
+                                    </div>
+                                    <div class="col s6">
+                                        <label for="assessedbydate">Date</label>
+                                        <input type="text" name="assessedbydate" id="assessedbydate" placeholder="Select Date" readonly/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="_submit text-center" id="btn_packing">
+<input type="hidden" value="" id="_SNO">
+                    <input type="hidden" value="" id="insert_Edit">
+                    <div class="_err" id="packing_err"></div>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                    <button type="button" class="waves-effect waves-light btn grey darken-4" onclick="tasksData()">Save</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="triggermodal" class="modal">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0">X</a>
+        <div class="row">
+            <div class="triggertitle">
+                <span id="trigt"></span>&nbsp; - Trigger Hit Cases 
+                <div class="row" style="margin-bottom:0">
+                    <div class="col m8"></div>
+                    <div class="col m4"><input type="text" name="autotriggeredclosuredate" id="autotriggeredclosuredate" class="_lastDate" placeholder="Select Closure Date" /></div>
+                </div>
+            </div>
+            <div class="col s12 p-0">
+                <div class="row table-data">
+                    <table id="_trigger">
+                        <thead>
+                            <tr>
+                                <th colspan="4">KPI</th>
+                                <th>Triggered Date</th>
+                                <th>Trigger</th>
+                                <th>KPI Value</th>
+                                <th>Consider</th>
+                                <th>Not Consider</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="9" class="text-center">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="exportmodal" class="modal _modal">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0">X</a>
+        <div class="row text-center" style="padding-top: 5vh;" id="reportdiv">
+            <div class="col s12 borderclass"><div style="font-size:20px; font-weight:bolder;">CAPA Report - <span id="capaid"></span></div></div>
+            <div class="col s6 borderclass">KPI : </div>
+            <div class="col s2 borderclass">KPI Hit On : </div>
+            <div class="col s2 borderclass">Date of Allocation : </div>
+            <div class="col s2 borderclass"><span id="report_dateofallocation"></span></div>
+            <div class="col s6 borderclass"><span id="report_kpi"></span></div>
+            <div class="col s2 borderclass"><span id="report_kpihiton"></span></div>
+            <div class="col s2 borderclass">Date of Submission : </div>
+            <div class="col s2 borderclass"><span id="report_dateofsubmission"></span></div>
+            <div class="col s2 borderclass" style="text-align:left;">Participants Names : </div>
+            <div class="col s10 borderclass" style="text-align:left;"><span id="report_participants" ></span></div>
+            <div class="col s6 borderclass" style="padding:0;">
+                <div class="col s12 borderclass">Step 1 : Define the problem </div>
+                <div class="row">
+                    <div class="col s3 borderclass">What : </div>
+                    <div class="col s9 borderclass"><span id="report_what"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col s3 borderclass">Where : </div>
+                    <div class="col s9 borderclass"><span id="report_where"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col s3 borderclass">When : </div>
+                    <div class="col s9 borderclass"><span id="report_when"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col s3 borderclass">Who : </div>
+                    <div class="col s9 borderclass"><span id="report_who"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col s3 borderclass">Why : </div>
+                    <div class="col s9 borderclass"><span id="report_why"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col s3 borderclass">How Big? : </div>
+                    <div class="col s9 borderclass"><span id="report_howbig"></span></div>
+                </div>
+            </div>
+            <div class="col s6 borderclass" style="padding:0;">
+                <div class="col s12 borderclass">STEP 2(A) : DATA MEASUREMENT & INFORMATION & Evidence (Attach Images/Trends separately)</div>
+                <div class="col s12 borderclass" style="height: 8vh;"><span id="report_evidance"></span></div>
+                <div class="col s12 borderclass">CORRECTION (What was done to keep the process/machine running)</div>
+                <div class="col s12 borderclass" style="height: 8.7vh;"><span id="report_correction"></span></div>
+            </div>
+            <div class="col s10 borderclass" style="padding:0;">
+                <div class="row">
+                    <div class="col s12 borderclass">STEP 3 - ANALYSE</div>
+                    <div class="col s4 borderclass" style="height: 8vh;">Man: <br> <span id="report_man"></span></div>
+                    <div class="col s4 borderclass" style="height: 8vh;">Method: <br> <span id="report_method"></span></div>
+                    <div class="col s4 borderclass" style="height: 8vh;">Measurement: <br> <span id="report_measurement"></span></div>
+                    <div class="col s4 borderclass" style="height: 8vh;">Machine: <br> <span id="report_machine"></span></div>
+                    <div class="col s4 borderclass" style="height: 8vh;">Material: <br> <span id="report_material"></span></div>
+                    <div class="col s4 borderclass" style="height: 8vh;">Enviornment: <br> <span id="report_enviornment"></span></div>
+                </div>
+            </div>
+            <div class="col s2 borderclass" style="padding:0;">
+                <div class="row">
+                    <div class="col s12 borderclass">Brainstorming tool</div>
+                    <div class="col s12 borderclass" style="height: 6vh;"><span id="report_brainstorming"></span></div>
+                    <div class="col s12 borderclass">Problem</div>
+                    <div class="col s12 borderclass" style="height: 6.7vh;"><span id="report_problem"></span></div>
+                </div>
+            </div>
+            <div class="col s12 borderclass" style="padding:0;">
+                <div class="row">
+                    <div class="col s8 borderclass">5 Why / FAULT TREEE ANALYSIS FOR</div>
+                    <div class="col s4 borderclass">Root cause should not be an effect</div>
+                    <div class="col s12"  style="padding:0;">
+                        <div class="row table-data">
+                            <table id="_Report5why">
+                                <thead>
+                                    <tr>
+                                        <th>Main Cause</th>
+                                        <th>Sub-Cause</th>
+                                        <th>Sub-Cause</th>
+                                        <th>Sub-Cause</th>
+                                        <th>5why Root Cause (RC)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 borderclass" style="padding:0;">
+                <div class="col s2">Step 4 : </div>
+                <div class="col s10 borderclass">CAPA (CA - For the RC, same problem will never recur, PA - All potential problems due to
+                    identified RC is eliminated)</div>
+                <div class="col s12 borderclass"  style="padding:0;">
+                    <div class="row table-data">
+                        <table id="_ReportCAPA">
+                            <thead>
+                                <tr>
+                                    <th>CA/PA</th>
+                                    <th>What</th>
+                                    <th>Who</th>
+                                    <th>When</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 borderclass" style="padding:0;">
+                <div class="col s4 borderclass">Make It Stick : </div>
+                <div class="col s4 borderclass">OPL</div>
+                <div class="col s4 borderclass">SOP</div>
+                <div class="col s4 borderclass">Training</div>
+                <div class="col s4 borderclass">Gemba</div>
+                <div class="col s4 borderclass">Poke Yoke/Modification</div>
+                <div class="col s12" style="padding: 0">
+                    <div class="row">
+                        <div class="col s4 borderclass">PM Schedule</div>
+                        <div class="col s8 borderclass"><span id="report_pm_schedule"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4 borderclass">Others</div>       
+                        <div class="col s8 borderclass"><span id="report_others"></span></div>
+                    </div>
+                </div>
+                <div class="col s12" style="padding:0">
+                    <div class="row">
+                        <div class="col s10 borderclass">STEP 5 : CONTROL (Make it Stick) CONFIRMATION</div>
+                        <div class="col s2 borderclass">Date : </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4 borderclass">Prepared by</div>
+                        <div class="col s4 borderclass"><span id="report_preparedby"></span></div>
+                        <div class="col s4 borderclass"><span id="report_preparedbydate"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4 borderclass">Reviewed by</div>
+                        <div class="col s4 borderclass"><span id="report_reviewedby"></span></div>
+                        <div class="col s4 borderclass"><span id="report_reviewedbydate"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4 borderclass">Assessed by</div>
+                        <div class="col s4 borderclass"><span id="report_assessedby"></span></div>
+                        <div class="col s4 borderclass"><span id="report_assessedbydate"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="_submit">
+            <button type="button" class="modal-close waves-effect waves-light btn btnCancel" onclick="reportprint()">Print</a>
+            <button type="button" class="waves-effect waves-light btn btnOk" onclick="Downloadaspdf()">Download</a>
+        </div>
+    </div>
+</div>
+<div id="closeModal" class="modal _modal _close">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0">X</a>
+        <div class="_para">
+            Are you sure you want to closed?
+        </div>
+        <div class="_submit">
+            <button type="button" class="modal-close waves-effect waves-light btn btnCancel">Cancel</a>
+            <button type="button" class="waves-effect waves-light btn btnOk" onclick="closetasksData()">Ok</a>
+        </div>
+    </div>
+</div>
+<div id="assessmentModal" class="modal _modal _close">
+    <div class="modal-content">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0">X</a>
+        <div class="_para">
+            To be assessed by the FI ITF
+        </div>
+        <div class="_submit">
+            <button type="button" class="modal-close waves-effect waves-light btn btnCancel">Cancel</a>
+            <button type="button" class="waves-effect waves-light btn btnOk" onclick="assess()">Approve</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal _modal modal-sm">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0; top: 0;">X</a>
+          <h5 class="modal-title">Actionable</h5>
+        </div>
+        <div class="modal-body">
+          <!-- <input type="text"  ID="BOMLTPdata"> -->
+          <div class="row">
+            <div class="row">
+              <div class="inputfield col s6">
+                <label>KPI : <span style="color:red">*</span></label>
+                <select id="act_kpi" class="_kpi">
+                    <option value="" disabled selected>Name of KPI </option>
+                </select>
+            </div>
+            <div class="col s6">
+                <label for="act_what">What </label>
+                <input type="text" name="act_what" maxlength="30" id="act_what"  placeholder="What" />
+            </div>
+            <div class="col s6">
+                <label for="act_creation_date">Creation Date </label>
+                <input type="text" name="act_creation_date" maxlength="30" id="act_creation_date"  placeholder="Creation Date" />
+            </div>
+            <div class="col s6">
+                <label for="act_closure_date">Closure Date </label>
+                <input type="text" name="act_closure_date" maxlength="30" id="act_closure_date"  placeholder="Closure Date" />
+            </div>
+            <div class="col s6">
+                <label for="act_status">St. of actionable </label>
+               <!-- <input type="text" name="act_status" maxlength="30" id="act_status"  placeholder="Status" />-->
+                <select id="act_status">
+              <option value="" disabled selected>Select Status of Actionable</option>
+              <option value="Not Applicable" >Not Applicable</option>
+              <option value="Closed" >Closed</option>
+              <option value="Pending" >Pending</option>    
+            </select>  
+            </div>
+            <div class="col s6">
+                <label for="act_who">Who (Member) </label>
+                <input type="text" name="act_who" maxlength="30" id="act_who"  placeholder="Who (Member)" />
+            </div>
+            <div class="col s12">
+                <label for="act_comments">Comments </label>
+                <textarea type="text" name="act_comments" maxlength="30" id="act_comments"  placeholder="Comments"> </textarea>
+            </div>
+
+
+             
+            </div>
+           
+            </div>
+            <div class="modal-footer">
+                <p id="error-msg1" class="text-danger"></p>
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg"
+                data-dismiss="modal"
+                onclick="createActionable()"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="closeModal2" class="modal _modal _close modal-sm" style="width: 30% !important;">
+        <div class="modal-content">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="position: absolute; right:0">X</a>
+            <div class="_para">
+                Are you sure you want to close?
+            </div>
+            <div class="_submit">
+                <button type="button" class="modal-close waves-effect waves-light btn btnCancel">Cancel</a>
+                <button type="button" class="waves-effect waves-light btn btnOk" onclick="closeActionableData()">Ok</a>
+            </div>
+        </div>
+    </div>
+  </div>

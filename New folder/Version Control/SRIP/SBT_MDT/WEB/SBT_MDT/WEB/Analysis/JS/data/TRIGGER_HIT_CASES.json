@@ -1,0 +1,25 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-07-15T22:18:51", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-07-15T21:18:51+0530", "EndDate" : "2021-07-15T22:18:51+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "KPI", "SourceColumn" : "KPI", "Description" : "KPI", "SQLDataType" : -9, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "Trigger_Hit_Cases", "SourceColumn" : "Trigger_Hit_Cases", "Description" : "Trigger_Hit_Cases", "SQLDataType" : -5, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "Problem_Solving_Taken", "SourceColumn" : "Problem_Solving_Taken", "Description" : "Problem_Solving_Taken", "SQLDataType" : 4, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "KPI" : "CREDIBLE-BATCH APRROVAL CT-Hrs-(Daily)", "Trigger_Hit_Cases" : 27, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "CREDIBLE-BREAKDOWN REDUCTION-Min-(Shift)", "Trigger_Hit_Cases" : 22, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "CREDIBLE-INPROCESS CHECK FOR BATCH-Min-(Shift)", "Trigger_Hit_Cases" : 4, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "CREDIBLE-RFT(ROYALE &TE)-%-(Daily)", "Trigger_Hit_Cases" : 102, "Problem_Solving_Taken" : 1 }, 
+		{ "KPI" : "CREDIBLE-RFT(ROYALE&TE)-%-(Daily)", "Trigger_Hit_Cases" : 103, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "I SMILE-Manual Intervention(Powder Sequence Hold)-%(Daily)", "Trigger_Hit_Cases" : 22, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "MAESTRO-LIQ PRE BATCHING TIME-Hrs-(Daily)", "Trigger_Hit_Cases" : 43, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "SO1 - CREDIBLE-HYGIENE SCORE FF (TSD&MIX)-Weekly", "Trigger_Hit_Cases" : 160, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "SO2 - AWESOME-KAIZENS RAISED-Nos-(Weekly)", "Trigger_Hit_Cases" : 165, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "SO2 - CREDIBLE-RM ADDN. ACCURACY PGL LIQ(ABS VAR)", "Trigger_Hit_Cases" : 2, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "SO3 - I SMILE-5S 2ND  FLOOR-%-(Weekly)", "Trigger_Hit_Cases" : 163, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "SO3-GREEN-ETY-HAZARDOUS WASTE-Kg-(Weekly)", "Trigger_Hit_Cases" : 30, "Problem_Solving_Taken" : 0 }, 
+		{ "KPI" : "SO3-GREEN-ETY-Proactive Reporting Raised-Nos(Weekly)", "Trigger_Hit_Cases" : 172, "Problem_Solving_Taken" : 0 } ]
+		 } ]
+	 }
+ }

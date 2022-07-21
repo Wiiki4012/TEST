@@ -1,0 +1,11 @@
+iframe {
+width:100%;
+mIn-height:100%;
+}
+.carousel { 
+min-height:1040px !important;
+
+}
+body {
+  overflow: hidden; /* Hide scrollbars */
+}

@@ -1,0 +1,29 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-18T08:20:36", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-18T07:20:36+0530", "EndDate" : "2021-05-18T08:20:36+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "GRAPH_ID", "SourceColumn" : "GRAPH_ID", "Description" : "GRAPH_ID", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "TEAM_NAME", "SourceColumn" : "TEAM_NAME", "Description" : "TEAM_NAME", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "KPI", "SourceColumn" : "KPI", "Description" : "KPI", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "LOWER_LIMIT", "SourceColumn" : "LOWER_LIMIT", "Description" : "LOWER_LIMIT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "UPPER_LIMIT", "SourceColumn" : "UPPER_LIMIT", "Description" : "UPPER_LIMIT", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "UNITFORYAXIS", "SourceColumn" : "UNITFORYAXIS", "Description" : "UNITFORYAXIS", "SQLDataType" : -9, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "KPI_TYPE", "SourceColumn" : "KPI_TYPE", "Description" : "KPI_TYPE", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "GRAPH_ID" : "1", "TEAM_NAME" : "Pac KING", "KPI" : "MAESTRO - Shade Changeover time (Daily) - Min SO1", "LOWER_LIMIT" : "120.00", "UPPER_LIMIT" : "90.00", "UNITFORYAXIS" : "Min", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "2", "TEAM_NAME" : "Pac KING", "KPI" : "MAESTRO - Shade Volume (Daily) - KL SO1", "LOWER_LIMIT" : "17.00", "UPPER_LIMIT" : "25.00", "UNITFORYAXIS" : "KL", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "3", "TEAM_NAME" : "Pac KING", "KPI" : "MAESTRO - Retail Volume of 1 Ltrs (Daily) - KL SO1", "LOWER_LIMIT" : "35.00", "UPPER_LIMIT" : "45.00", "UNITFORYAXIS" : "KL", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "4", "TEAM_NAME" : "Pac KING", "KPI" : "AWESOME- Vol of Pack VS Asking  (Daily) - % SO3", "LOWER_LIMIT" : "90.00", "UPPER_LIMIT" : "100.00", "UNITFORYAXIS" : "KL", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "5", "TEAM_NAME" : "Pac KING", "KPI" : "AWESOME - BD Related to STV (Daily)- Mins SO3", "LOWER_LIMIT" : "75.00", "UPPER_LIMIT" : "60.00", "UNITFORYAXIS" : "Min", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "6", "TEAM_NAME" : "Pac KING", "KPI" : "GREENETY - Proactive Reporting (Weekly) - Nos SO3", "LOWER_LIMIT" : "3.00", "UPPER_LIMIT" : "5.00", "UNITFORYAXIS" : "Nos", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "8", "TEAM_NAME" : "Pac KING", "KPI" : "CREDIBLE - Air Leak tag raised (Weekly) - Nos SO3", "LOWER_LIMIT" : "5.00", "UPPER_LIMIT" : "10.00", "UNITFORYAXIS" : "Points", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "9", "TEAM_NAME" : "Pac KING", "KPI" : "CREDIBLE - Breakdown >75mins (Daily) - Nos SO3", "LOWER_LIMIT" : "2.00", "UPPER_LIMIT" : "1.00", "UNITFORYAXIS" : "Nos", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "10", "TEAM_NAME" : "Pac KING", "KPI" : "CREDIBLE - Avail of Bulk lines (Daily) - % SO3", "LOWER_LIMIT" : "50.00", "UPPER_LIMIT" : "60.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "11", "TEAM_NAME" : "Pac KING", "KPI" : "CREDIBLE - Avail of Retail lines (Daily) % SO3", "LOWER_LIMIT" : "50.00", "UPPER_LIMIT" : "60.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "12", "TEAM_NAME" : "Pac KING", "KPI" : "CREDIBLE - Packing Complaints (Weekly) - Nos SO1", "LOWER_LIMIT" : "1.00", "UPPER_LIMIT" : "0.00", "UNITFORYAXIS" : "Nos", "KPI_TYPE" : "Manual" }, 
+		{ "GRAPH_ID" : "7", "TEAM_NAME" : "Pac KING", "KPI" : "ISMILE - 5S Score (Weekly) - % SO3", "LOWER_LIMIT" : "30.00", "UPPER_LIMIT" : "35.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" },
+		{ "GRAPH_ID" : "7", "TEAM_NAME" : "Pac KING", "KPI" : "Others", "LOWER_LIMIT" : "30.00", "UPPER_LIMIT" : "35.00", "UNITFORYAXIS" : "%", "KPI_TYPE" : "Manual" } ]
+		 } ]
+	 }
+ }

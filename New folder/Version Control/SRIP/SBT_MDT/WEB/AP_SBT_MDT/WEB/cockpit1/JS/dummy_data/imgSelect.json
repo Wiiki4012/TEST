@@ -1,0 +1,15 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-21T14:48:40", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-21T13:48:40+0530", "EndDate" : "2021-05-21T14:48:40+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "ID", "SourceColumn" : "ID", "Description" : "ID", "SQLDataType" : -5, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "PLANT", "SourceColumn" : "PLANT", "Description" : "PLANT", "SQLDataType" : -9, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "TEAMNAME", "SourceColumn" : "TEAMNAME", "Description" : "TEAMNAME", "SQLDataType" : -9, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "BASE64", "SourceColumn" : "BASE64", "Description" : "BASE64", "SQLDataType" : 2011, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "LASTUPDATEDDATETIME", "SourceColumn" : "LASTUPDATEDDATETIME", "Description" : "LASTUPDATEDDATETIME", "SQLDataType" : 93, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "ID" : 1, "PLANT" : "NULL", "TEAMNAME" : "VAJRAASTRA", "BASE64" : "", "LASTUPDATEDDATETIME" : "05/21/2021 00:00:00" } ]
+		 } ]
+	 }
+ }

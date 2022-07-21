@@ -1,0 +1,151 @@
+{
+  "Rowsets": {
+    "DateCreated": "2021-07-30T16:10:46",
+    "Version": "15.1 SP6 Patch 34 (12 Mar, 2019)",
+    "StartDate": "2021-07-30T15:10:46+0530",
+    "EndDate": "2021-07-30T16:10:46+0530",
+    "CachedTime": "",
+    "Rowset": [
+      {
+        "Columns": {
+          "Column": [
+            {
+              "Name": "ACT_ID",
+              "SourceColumn": "ACT_ID",
+              "Description": "ACT_ID",
+              "SQLDataType": -5,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "KPI",
+              "SourceColumn": "KPI",
+              "Description": "KPI",
+              "SQLDataType": -9,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "TEAM_NAME",
+              "SourceColumn": "TEAM_NAME",
+              "Description": "TEAM_NAME",
+              "SQLDataType": -9,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "CREATION_DATE",
+              "SourceColumn": "CREATION_DATE",
+              "Description": "CREATION_DATE",
+              "SQLDataType": 93,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "CLOSURE_DATE",
+              "SourceColumn": "CLOSURE_DATE",
+              "Description": "CLOSURE_DATE",
+              "SQLDataType": 93,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "STATUS",
+              "SourceColumn": "STATUS",
+              "Description": "STATUS",
+              "SQLDataType": 12,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "MEMBER",
+              "SourceColumn": "MEMBER",
+              "Description": "MEMBER",
+              "SQLDataType": -9,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "COMMENTS",
+              "SourceColumn": "COMMENTS",
+              "Description": "COMMENTS",
+              "SQLDataType": -9,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            },
+            {
+              "Name": "LAST_UPDATEDON",
+              "SourceColumn": "LAST_UPDATEDON",
+              "Description": "LAST_UPDATEDON",
+              "SQLDataType": 93,
+              "MinRange": 1.0,
+              "MaxRange": 1.0
+            }
+          ]
+        },
+        "Row": [
+          {
+            "ACT_ID": 2,
+            "KPI": "MAESTRO - Retail Volume of 1 Ltrs (Daily) - KL SO1",
+            "TEAM_NAME": "",
+            "CREATION_DATE": "07/30/2021 00:00:00",
+            "CLOSURE_DATE": "07/30/2021 00:00:00",
+            "STATUS": "Pending",
+            "MEMBER": "",
+            "COMMENTS": "",
+            "LAST_UPDATEDON": "07/29/2021 00:00:00",
+            "WHAT": "Test What"
+          },
+          {
+            "ACT_ID": 3,
+            "KPI": "ISMILE - 5S Score (Weekly) - % SO3",
+            "TEAM_NAME": "",
+            "CREATION_DATE": "07/30/2021 00:00:00",
+            "CLOSURE_DATE": "07/30/2021 00:00:00",
+            "STATUS": "Pending",
+            "MEMBER": "",
+            "COMMENTS": "",
+            "LAST_UPDATEDON": "07/29/2021 00:00:00",
+            "WHAT": "Test What"
+          },
+          {
+            "ACT_ID": 1,
+            "KPI": "ISMILE - 5S Score (Weekly) - % SO3",
+            "TEAM_NAME": "",
+            "CREATION_DATE": "07/30/2021 00:00:00",
+            "CLOSURE_DATE": "07/30/2021 00:00:00",
+            "STATUS": "Closed",
+            "MEMBER": "",
+            "COMMENTS": "",
+            "LAST_UPDATEDON": "07/29/2021 00:00:00",
+            "WHAT": "Test What"
+          },
+          {
+            "ACT_ID": 4,
+            "KPI": "ISMILE - 5S Score (Weekly) - % SO3",
+            "TEAM_NAME": "",
+            "CREATION_DATE": "07/30/2021 00:00:00",
+            "CLOSURE_DATE": "07/30/2021 00:00:00",
+            "STATUS": "Pending",
+            "MEMBER": "",
+            "COMMENTS": "",
+            "LAST_UPDATEDON": "07/30/2021 00:00:00",
+            "WHAT": "Test What"
+          },
+          {
+            "ACT_ID": 5,
+            "KPI": "MAESTRO - Retail Volume of 1 Ltrs (Daily) - KL SO1",
+            "TEAM_NAME": "",
+            "CREATION_DATE": "07/30/2021 00:00:00",
+            "CLOSURE_DATE": "07/30/2021 00:00:00",
+            "STATUS": "Pending",
+            "MEMBER": "",
+            "COMMENTS": "",
+            "LAST_UPDATEDON": "07/30/2021 00:00:00",
+            "WHAT": "Test What"
+          }
+        ]
+      }
+    ]
+  }
+}

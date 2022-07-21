@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://www.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global/resources/images/Favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+<META http-equiv='cache-control' content='no-cache'>
+	<META http-equiv='expires' content='0'>
+	<META http-equiv='pragma' content='no-cache'>
+    <title>Dashboard - Vizag</title>
+    <link rel="stylesheet" href="CSS/documentation.css" />
+    <link rel="stylesheet" href="CSS/materialize.min.css" />
+    <link rel="stylesheet" href="CSS/animate.min.css" />
+    <link rel="stylesheet" href="CSS/aos.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/daterangepicker.css" />
+  </head>
+  <body>
+    <div class="_banner">
+	  <h1 class="heading" id="teambannertitle">No Banner</h1>
+	  <img src="" id="_uploadImg" height="100">
+    </div>
+    <div class="_List">
+      <div class="notification-box" id="escalationbell" onclick="escalationmodal()">
+                <span class="notification-count" id="escalationcount">0</span>
+                <div class="notification-bell">
+                  <span class="bell-top"></span>
+                  <span class="bell-middle"></span>
+                  <span class="bell-bottom"></span>
+                  <span class="bell-rad"></span>
+                </div>
+              </div>
+      <div class="row">
+        <div class="_box col s6 m4">
+          <div class="_lists _insideBox agenda" ondblclick="viewList()">
+            <lablel class="_lable">Meeting Agenda</lablel>
+            <pre style="background-color:#ffd465; background-image: linear-gradient(to right, #ffff00b8, #ff8d00); color:#4f4f4f; height: 160px !important; overflow-x: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0;"><div class="_lists-" id="_content1">          
+            </div></pre>
+          </div>
+        </div>
+        <div class="_box col s6 m4">
+          <div class="_lists _insideBox _business">
+            <lablel class="_lable">'Business perspective - AP Charter'
+            </lablel>
+            <div class="_lists-">  
+              <i>"The 3 strategic outcomes as part of AP Charter are being implemented as the following 3 Project outcomes at AP Wizards"</i><br>
+              PO 1 - <strong>Dh'ananta Shartr(a) - </strong> Infinite value through new strategies/thinking, creating non-replicable advantage <br>
+              PO 2 - <strong>Starship Falcon - </strong> Propelling APL to Global Leadership<br>
+              PO 3 - <strong>Vyansamadhanam - </strong> Commitment towards life and breath
+                  
+            </div>
+          </div>
+        </div>
+        <div class="_box col s6 m4">
+          <div class="_contentDrop col s12  p-0">
+            <select class="_selectField" id="_TECHNOCRATS"></select>
+            <input
+              type="text"
+              name="_daterange"
+              id="_daterange"
+              class="_daterange"
+            />
+            <button type="button" class="btn btnSubmit" onclick="listChart()">
+              Get
+            </button>
+          </div>         
+          <div class="col s12  p-0">
+            <div class="row">
+              <div class="col s12 m4 starplaceholder"   ondblclick="star()">
+                <img src="" id="_staroftheday" height="150">
+              </div>
+              <div class="col s12 m8" style="padding:1.5vh; padding-top:2vh">
+                <img src="/XMII/CM/AP_SBT_MDT/V3/main_dashboard/image/codeofconduct.png" style="min-height: 50px !important; max-height: 65px !important" class="img-responsive">
+                <lablel class="_lable"> Star of the Day & Desc.</lablel>        
+                <div class="_lists _dayInput" id="_content7" ondblclick="viewList()"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        
+        <div class="_box col s6 m3">
+          <lablel class="_lable">Plan for the day</lablel>
+          <div class="_lists" ondblclick="viewList()">
+             <pre style="background-color:white;color:#4f4f4f; height: 140px !important; overflow-x: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0;"><div class="_data" id="_content2">
+            </div></pre>
+          </div>
+        </div>
+        <div class="_box col s6 m3">
+          <lablel class="_lable">Critical for 24 Hrs</lablel>
+          <div class="_lists" ondblclick="viewList()">
+             <pre style="background-color:white;color:#4f4f4f; height: 140px !important; overflow-x: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0;"><div class="_data" id="_content4">
+            </div></pre>
+          </div>
+        </div>
+        <div class="_boxETM col s6 m3">
+          <lablel class="_lable">Escalation to MDT</lablel>
+          <div class="_lists" ondblclick="viewList()">
+         <pre style="background-color:white;color:#4f4f4f; height: 140px !important; overflow-x: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0;"><div class="_data" id="_content5">
+          </div></pre>
+          </div>
+        </div>
+        <div class="_box col s6 m3">         
+          <lablel class="_lable">Escalations to SSC/ Others</lablel>        
+          <div class="_lists" ondblclick="viewList()">
+             <pre style="background-color:white;color:#4f4f4f; height: 140px !important; overflow-x: auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0;"><div class="_data" id="_content6">
+            </div></pre>
+          </div>        
+        </div>
+      </div>
+      <div class="row _chartList">
+        <div class="col s6 m4 _box"> 
+          <div class="_record">
+          <div class="_submit btnAttentence">
+            <h4 class="_attT">MTD Attendance- Particular members</h4>
+            <button type="button" class="btn btnOk" id="attnBtn" onclick="saveAtten()">Save</button>
+           </div>  
+           <div class="_error" id="_notA">Attendance Entry Not Allowed</div>       
+            <div class="attendance" id="attenList">            
+            </div>
+          </div>          
+        </div>
+        <div class="col s6 m4 _box" id="_myChart1">
+          <canvas class="_canvas" id="myChart1"></canvas>
+        </div>
+        <div class="col s6 m4 _box" id="_myChart2">
+          <canvas class="_canvas" id="myChart2"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/materialize.min.js"></script>
+  <script src="JS/aos.js"></script>
+  <script src="JS/Chart.min.js"></script>
+  <script src="JS/chartjs-plugin-datalabels@0.7.0.js"></script>
+  <script src="JS/moment.min.js"></script>
+  <script src="JS/script.js"></script>
+  <script type="text/javascript" src="JS/daterangepicker.min.js"></script>
+</html>
+
+<div id="_viewList" class="modal _modal _viewList">
+  <div class="modal-content">
+    <a class="modal-close waves-effect waves-green _closeIcon">x</a>
+    <div class="row">
+      <div class="_box col s6 m4">
+        <lablel class="_lable">Meeting Agenda</lablel>
+        <textarea class="_input" id="content1" maxlength="500" onkeyup="characters('1')"></textarea>
+        <span class="_length" id="-content1"></span>
+      </div>
+      <div class="_box col s6 m4">
+        <lablel class="_lable">Plan for the day</lablel>
+        <textarea class="_input" id="content2" maxlength="500" onkeyup="characters('2')"></textarea>
+        <span class="_length" id="-content2"></span>
+      </div>
+      <!-- <div class="_box col s6 m4">
+        <lablel class="_lable">Code of conduct</lablel>
+        <textarea class="_input" id="content3" maxlength="500" onkeyup="characters('3')"></textarea>
+        <span class="_length" id="-content3"></span>
+      </div> -->
+      <div class="_box col s6 m4">
+        <lablel class="_lable">Critical for 24 Hrs</lablel>
+        <textarea class="_input" id="content4" maxlength="500" onkeyup="characters('4')"></textarea>
+        <span class="_length" id="-content4"></span>
+      </div>
+      <div class="_box col s6 m4">
+        <lablel class="_lable">Escalation to MDT</lablel>
+
+        <textarea class="_input" id="content5" maxlength="500" onkeyup="characters('5')"></textarea>
+    
+   <span class="_length" id="-content5"></span>
+      </div>
+      <div class="_box col s6 m4">
+        <lablel class="_lable"> Star of the Day & Desc.</lablel>        
+          <input type="text" id="content7" class="_inputT" maxlength="500" onkeyup="characters('7')">
+          <span class="_length" id="-content7"></span>
+      </div>
+      <div class="_box col s6 m4">
+        <lablel class="_lable">Escalations to SSC/ Others</lablel>        
+        <textarea class="_input" id="content6" maxlength="500" onkeyup="characters('6')"></textarea>
+        <span class="_length" id="-content6"></span>
+      </div>
+      <!-- <div class="_box col s6 m4">       
+        <div class="col s12 m6 _box">
+          <lablel class="_lable"> Star of the Day & Desc.</lablel>        
+          <input type="text" id="content7" class="_inputT" maxlength="500" onkeyup="characters('7')">
+          <span class="_length" id="-content7"></span>
+        </div>
+        <div class="col s12 m6 _box">
+        <lablel class="_lable">MDT to SSC Escalations</lablel>        
+        <textarea class="_input" id="content6" maxlength="500" onkeyup="characters('6')"></textarea>
+        <span class="_length" id="-content6"></span>
+      </div>
+      </div> -->
+    </div>
+    <div class="_submit">     
+      <button type="button" class="waves-effect waves-light btn btnOk" onclick="submitData()">Submit</a>
+    </div>
+  </div>
+</div>
+<div id="escalationmodal" class="modal">
+  <div class="modal-content">
+ <!--<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" style="float:right">X</a>-->
+    <div class="row">
+      <div class="triggertitle">
+        Escalations
+      </div>
+      <div class="col s12 p-0">
+        <div class="row table-data" style="margin-left:0.25vw">
+          <table id="_escalation">
+            <thead>
+              <tr>
+                <th>Team Name</th>
+                <th colspan="4">Escalation</th>
+                <th>Escalated On</th>
+		<th>Comments</th>
+                            <th>Action</th>
+                <!---<th>Action</th>-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="7" class="text-center">Loading...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class= "outerModal">
+<div id="_uploadStar" class="modal _modal outerModal" >
+  <div class="modal-content">
+    <div class="row">
+      <h1 class="head-title" id="uploadStarTeamName"></h1>
+      <a class="modal-close waves-effect waves-green _closeIcon">x</a>
+
+      <div class="_uploadFile">
+        <label class="_label col s12 p-0">Upload Image</label>
+        <input
+          class="inputField"
+          type="file"
+          onchange="uploadFilestar(event)"
+          id="filebase64"
+          accept="image/*"
+        />
+        <img src="" id="_uploadImgstar" class="uploadTeam">
+        <div class="_err" id="_noDataStar">No Data!</div>
+      </div>
+      <div class="_submit text-center" id="btn_star"> 
+        <input type="hidden" id="_base64ImgStar">         
+        <div class="_err" id="sbt_star"></div>
+        <div class="progress">
+          <div class="indeterminate"></div>
+      </div>
+      <button type="button" onclick="starData()" class="waves-effect  modal-close- waves-light btn btnmodal">Submit</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

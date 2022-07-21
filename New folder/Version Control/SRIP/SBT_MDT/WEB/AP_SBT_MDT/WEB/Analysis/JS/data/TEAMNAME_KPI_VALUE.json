@@ -1,0 +1,25 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-07-15T22:01:48", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-07-15T21:01:48+0530", "EndDate" : "2021-07-15T22:01:48+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "Teamname", "SourceColumn" : "Teamname", "Description" : "Teamname", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "KPI", "SourceColumn" : "KPI", "Description" : "KPI", "SQLDataType" : 12, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "Value", "SourceColumn" : "Value", "Description" : "Value", "SQLDataType" : -5, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "CREDIBLE-BATCH APRROVAL CT", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "CREDIBLE-BREAKDOWN REDUCTION(Shift)", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "CREDIBLE-HYGIENE SCORE FIRST FLOOR(TSD&MIX)-Weekly", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "CREDIBLE-RFT(ROYALE &TE)- Daily", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "CREDIBLE-RFT(ROYALE &TE)-%-(Daily)", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "CREDIBLE-RFT(Royal&Tractor)- Daily", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "GREEN-ETY-HAZARDOUS WASTE(Sludge&waste paint)", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "I SMILE-Manual Intervention (Powder Sequence Hold)", "Value" : 4 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "I SMILE-Manual Intervention(Powder Sequence Hold)-%(Daily)", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "MAESTRO-LIQ PRE BATCHING TIME(Daily)", "Value" : 5 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "MAESTRO-LIQ PRE BATCHING TIME-Hrs-(Daily)", "Value" : 1 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "SO2 - CREDIBLE-RM ADDN. ACCURACY PGL LIQ(ABS VAR)", "Value" : 2 }, 
+		{ "Teamname" : "TECHNOCRATS", "KPI" : "SO3-GREEN-ETY-HAZARDOUS WASTE-Kg-(Weekly)", "Value" : 1 } ]
+		 } ]
+	 }
+ }

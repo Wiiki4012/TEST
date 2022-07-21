@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://www.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global/resources/images/Favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+<META http-equiv='cache-control' content='no-cache'>
+	<META http-equiv='expires' content='0'>
+	<META http-equiv='pragma' content='no-cache'>
+    <title>Daily - Mysuru</title>
+    <link rel="stylesheet" href="CSS/documentation.css" />
+    <link rel="stylesheet" href="CSS/materialize.min.css" />
+    <link rel="stylesheet" href="CSS/animate.min.css" />
+    <link rel="stylesheet" href="CSS/aos.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="CSS/daterangepicker.css"
+    />
+  </head>
+  <body>
+    <div class="_List">
+      <h1 class="text-center my-3 head-title">Daily &#45;  <span id="_team"></span></h1>
+      <div class="_contentDrop col s12 p-0">
+        <select class="_selectField" id="_TECHNOCRATS"></select>
+        <input type="text" name="_daterange" id="_daterange" readonly class="_daterange" />
+        <button type="button" class="btn btnSubmit" onclick="listChart()">Submit</button>
+      </div>
+      <div class="row _chartList" >
+        <div class="col s6 m4 l3 _type" id="_myChart1" ondblclick="viewList(1)"> 
+          <div class="resp"><span class="arrow _left disabled" onclick="slideChange(2)">&leftarrow;</span>         
+          <canvas class="_canvas" id="myChart1"></canvas>
+          <span class="arrow _right" onclick="slideChange(2)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart2" ondblclick="viewList(2)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(1)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart2"></canvas>
+          <span class="arrow _right" onclick="slideChange(3)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart3" ondblclick="viewList(3)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(2)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart3"></canvas>
+          <span class="arrow _right" onclick="slideChange(4)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart4" ondblclick="viewList(4)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(3)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart4"></canvas>
+          <span class="arrow _right" onclick="slideChange(5)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart5" ondblclick="viewList(5)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(4)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart5"></canvas>
+          <span class="arrow _right" onclick="slideChange(6)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart6" ondblclick="viewList(6)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(5)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart6"></canvas>
+          <span class="arrow _right" onclick="slideChange(7)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart7" ondblclick="viewList(7)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(6)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart7"></canvas>
+          <span class="arrow _right" onclick="slideChange(8)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart8" ondblclick="viewList(8)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(7)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart8"></canvas>
+          <span class="arrow _right" onclick="slideChange(9)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart9" ondblclick="viewList(9)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(8)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart9"></canvas>
+          <span class="arrow _right" onclick="slideChange(10)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart10" ondblclick="viewList(10)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(9)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart10"></canvas>
+          <span class="arrow _right" onclick="slideChange(11)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart11" ondblclick="viewList(11)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(10)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart11"></canvas>
+          <span class="arrow _right" onclick="slideChange(12)">&rightarrow;</span> </div>
+        </div>
+        <div class="col s6 m4 l3 _type" id="_myChart12" ondblclick="viewList(12)">
+          <div class="resp"><span class="arrow _left" onclick="slideChange(11)">&leftarrow;</span>
+          <canvas class="_canvas" id="myChart12"></canvas>
+          <span class="arrow _right disabled" onclick="slideChange(12)">&rightarrow;</span> </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/materialize.min.js"></script>
+  <script src="JS/aos.js"></script>
+  <script src="JS/Chart.min.js"></script>
+  <script src="JS/chartjs-plugin-datalabels@0.7.0.js"></script>
+  <script src="JS/moment.min.js"></script>
+  <script src="JS/script.js"></script>
+  <script
+    type="text/javascript"
+    src="JS/daterangepicker.min.js"
+  ></script>
+</html>

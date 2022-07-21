@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"
+        href="https://www.asianpaints.com/etc.clientlibs/apcolourcatalogue/clientlibs/clientlib-global/resources/images/Favicon.png"
+        type="image/gif" sizes="16x16" />
+    <META http-equiv='cache-control' content='no-cache'>
+    <META http-equiv='expires' content='0'>
+    <META http-equiv='pragma' content='no-cache'>
+    <title>SBT/MDT Meetings - COCKPIT - II</title>
+    <link rel="stylesheet" href="CSS/documentation.css" />
+    <link rel="stylesheet" href="CSS/materialize.min.css" />
+    <link rel="stylesheet" href="CSS/animate.min.css" />
+    <link rel="stylesheet" href="CSS/aos.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="/XMII/CM/AP_SBT_MDT/main_dashboard/JS/daterangepicker.css" />
+</head>
+
+<body>
+    <div class="_cockpitList">
+        <h1 class="text-center my-3 head-title">
+            <span id="_teamName"></span>
+        </h1>
+        <div class="input-field col s12 _selectField p-0">
+            <select id="_team" onchange="_lists()">
+                <option value="" disabled selected>Select team</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 materialType">
+                <div class="_content">
+                    <h2 class="_title">Edit Graph Details</h2>
+                </div>
+                <div class="table-data">
+                    <table id="_graphList">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Team Name</th>
+                                <th colspan="2">KPI</th>
+                                <th>Trigger</th>
+                                <th>Target</th>
+                                <th>UOM</th>
+                                <th>Calculation Logic</th>
+                                <th>Update Frequency</th>
+                                <th>KPI Type</th>
+                                <th>Edit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="11" class="text-center">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col s12 m12 materialType">
+                <div class="_content">
+                    <h2 class="_title">Update KPI Values</h2>
+                    <div>
+                        <span class="_downloadExcel" onclick="excelData()" title="Download format">&#8595;</span>
+                        <button type="button" class="waves-effect waves-light btn btnModal" onclick="kpiupload()">
+                            Upload
+                        </button>
+                        <input type="text" readonly name="_datepicker" class="_datepicker" id="_datepicker"
+                            onchange="KPIValues()">
+
+
+                    </div>
+                </div>
+                <div class="table-data">
+                    <table id="_KpiValues">
+                        <thead>
+                            <tr>
+
+                                <th>Team Name</th>
+                                <th>Date</th>
+                                <th>Shift</th>
+                                <th>Graph Id</th>
+                                <th colspan="2">KPI</th>
+                                <th>Value</th>
+                                <th>Weighted KPI Value</th>
+                                <th colspan="2">Reason</th>
+                                <th>Edit</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="9" class="text-center">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="JS/jquery.min.js"></script>
+<script src="JS/materialize.min.js"></script>
+<script src="JS/aos.js"></script>
+<script src="JS/Chart.min.js"></script>
+<script src="JS/chartjs-plugin-datalabels@0.7.0.js"></script>
+<script src="JS/moment.min.js"></script>
+<script src="JS/script.js"></script>
+<script type="text/javascript" src="/XMII/CM/AP_SBT_MDT/main_dashboard/JS/daterangepicker.min.js"></script>
+
+</html>
+
+<!-- Modal Structure -->
+<div id="modaluploadkpi" class="modal _modal">
+    <div class="modal-content">
+        <div class="row">
+            <h1 class="head-title">Upload KPI Values</h1>
+            <a class="modal-close waves-effect waves-green _closeIcon">x</a>
+
+            <div class="_uploadFile">
+                <label class="_label col s12 p-0">Upload File</label>
+                <input class="inputField" type="file" onclick="selectFile()" id="fileUpload" accept=".xls,.xlsx,.csv" />
+                <div class="progress" id="_progress" style="display: none">
+                    <div class="indeterminate"></div>
+                </div>
+            </div>
+            <div class="_submit text-center">
+                <span id="_error1"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal1" class="modal _modal">
+    <div class="modal-content">
+        <div class="row">
+            <h1 class="head-title"> Update Graph Details
+            </h1>
+            <form class="col s12 p-0">
+                <div class="row">
+                    <div class="col s12 text-center _radio">
+                        <label>
+                            <input class="with-gap" name="KpiType" value="Auto" id="KpiType_A" type="radio" />
+                            <span>Auto</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" name="KpiType" value="Manual" id="KpiType_M" type="radio" checked />
+                            <span>Manual</span>
+                        </label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="_kpi_name" placeholder="KPI Name" type="text" class="validate" />
+                        <label for="KPI Name">KPI Name</label>
+                    </div>
+
+                    <div class="input-field col s7">
+                        <input id="_UOM" placeholder="UOM" type="text" class="validate" />
+                        <label for="UOM">UOM</label>
+                    </div>
+                    <div class="col s5 text-center">
+                        <label for="ischarter" id="chartericon">
+                            <input name="ischarter" id="ischarter" class="filled-in" type="checkbox" />
+                            <span>Charter KPI</span>
+                        </label>
+                    </div>
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_target_w1" placeholder="Target" type="number" class="validate" />
+                        <label for="_target_w1">Target - Week - 1</label>
+                    </div>
+
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_trigger_w1" placeholder="Trigger" type="number" class="validate" />
+                        <label for="_trigger_w1">Trigger - Week - 1</label>
+                    </div>
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_target_w2" placeholder="Target" type="number" class="validate" />
+                        <label for="_target_w1">Target - Week - 2</label>
+                    </div>
+
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_trigger_w2" placeholder="Trigger" type="number" class="validate" />
+                        <label for="_trigger_w2">Trigger - Week - 2</label>
+                    </div>
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_target_w3" placeholder="Target" type="number" class="validate" />
+                        <label for="_target_w3">Target - Week - 3</label>
+                    </div>
+
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_trigger_w3" placeholder="Trigger" type="number" class="validate" />
+                        <label for="_trigger_w3">Trigger - Week - 3</label>
+                    </div>
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_target_w4" placeholder="Target" type="number" class="validate" />
+                        <label for="_target_w4">Target - Week - 4</label>
+                    </div>
+
+                    <div class="input-field col s6" style="margin-bottom: 0;">
+                        <input id="_trigger_w4" placeholder="Trigger" type="number" class="validate" />
+                        <label for="_trigger_w4">Trigger - Week - 4</label>
+                    </div>
+                    <div class="input-field col s6" style="margin-top: 0;">
+                        <label>Calculation Logic</label><br><br>
+                        <select id="_calculationlogic">
+                            <option value="" disabled="" selected="">Select Calculation Logic</option>
+                            <option value="sum">Sum</option>
+                            <option value="average">Average</option>
+                            <option value="lastupdated">Last Updated</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field col s6" style="margin-top: 0;">
+                        <label>Update Frequency</label><br><br>
+                        <select id="_updatefrequency">
+                            <option value="" disabled="" selected="">Select Update Frequency</option>
+                            <option value="daily">Daily</option>
+                            <option value="week">Weekly</option>
+                            <option value="fortnight">Fortnightly</option>
+                            <option value="month">Monthly</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="_submit text-center" id="btn_graph">
+                    <input type="hidden" id="graphid">
+                    <div class="_err" id="graph_err"></div>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                    <button type="button" onclick="updateGraph()"
+                        class="waves-effect  modal-close- waves-light btn btnModal">Update</a>
+                        <button type="button" onclick="clearGraph()"
+                            class="waves-effect  modal-close- waves-light btn deep-orange">Clear</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="KPIModal" class="modal _modal">
+    <div class="modal-content">
+        <div class="row">
+            <h1 class="head-title"> Update KPI Values
+            </h1>
+
+            <form class="col s12 p-0">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="_daily" placeholder="KPI Value (Daily)" type="number" class="validate" />
+                        <label for="KPI Value (Daily)">KPI Value (Daily)</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="_Reason" placeholder="Enter KPI Hit Reason" type="text" class="validate" />
+                        <label for="Enter KPI Hit Reason">Reason</label>
+                    </div>
+
+                    <!--<div class="input-field col s12">
+              <input 
+                id="_monthly"
+                placeholder="KPI Value (Monthly)"
+                type="number"
+                class="validate"
+              />
+              <label for="KPI Value (Monthly)">KPI Value (Monthly)</label>
+            </div> -->
+
+                </div>
+                <div class="_submit text-center" id="btn_KPI">
+                    <input type ="hidden" id="_date">
+                    <input type="hidden" id="_shift">
+                    <input type="hidden" id="_sno">
+                    <input type="hidden" id="_kpiname">
+                    <div class="_err" id="KPI_err"></div>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                    <button type="button" onclick="KPIUpdate()"
+                        class="waves-effect  modal-close- waves-light btn btnModal">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-19T18:14:42", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-19T17:14:42+0530", "EndDate" : "2021-05-19T18:14:42+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "Output", "SourceColumn" : "Output", "Description" : "", "SQLDataType" : 1, "MinRange" : 0.0, "MaxRange" : 0.0 } ] }, 
+	"Row" : [ 
+		{ "Output" : "Y" } ]
+		 } ]
+	 }
+ }

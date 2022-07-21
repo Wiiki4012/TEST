@@ -1,0 +1,16 @@
+{ "Rowsets" : { 
+	"DateCreated" : "2021-05-19T15:02:44", "Version" : "15.1 SP6 Patch 34 (12 Mar, 2019)", "StartDate" : "2021-05-19T14:02:44+0530", "EndDate" : "2021-05-19T15:02:44+0530", "CachedTime" : "", 
+	"Rowset" : [ 
+	{ "Columns" : { 
+		"Column" : [ 
+		{ "Name" : "Date", "SourceColumn" : "Date", "Description" : "", "SQLDataType" : 93, "MinRange" : 1.0, "MaxRange" : 1.0 }, 
+		{ "Name" : "percentage", "SourceColumn" : "percentage", "Description" : "", "SQLDataType" : 4, "MinRange" : 1.0, "MaxRange" : 1.0 } ] }, 
+	"Row" : [ 
+		{ "Date" : "05/12/2021 00:00:00", "percentage" : 44 }, 
+		{ "Date" : "05/13/2021 00:00:00", "percentage" : 56 }, 
+		{ "Date" : "05/17/2021 00:00:00", "percentage" : 33 }, 
+		{ "Date" : "05/18/2021 00:00:00", "percentage" : 56 }, 
+		{ "Date" : "05/19/2021 00:00:00", "percentage" : 67 } ]
+		 } ]
+	 }
+ }
